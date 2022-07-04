@@ -5,13 +5,5 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 400,
-  },
-  content: {
-    alignContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    flexDirection: 'column',
-    top: 150,
   }
 });

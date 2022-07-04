@@ -1,7 +1,5 @@
-import { AntDesign } from '@expo/vector-icons';
 import React from 'react';
-import { Image, View, Text } from 'react-native';
-import { Header } from '../Header';
+import { View, Text, Image } from 'react-native';
 
 import { styles } from './styles';
 
@@ -10,8 +8,9 @@ export function Login() {
   return (
     <View 
     style={styles.container}>
+      <Image style={styles.content}  source={require('../../assets/Group_737.png')} />
       <Text style={styles.salutation}>
-      Olá! Que bom vevocê por aqui!
+    Olá! Que bom ver você por aqui!
       </Text>
       <Text style={styles.paragraph}>
       O cobra fácil é um facilitador de cobranças, aqui

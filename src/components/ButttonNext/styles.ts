@@ -4,15 +4,16 @@ import { FONTS } from '../../themes/fonts';
 
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    textAlign: 'center',
+    alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 150,
+    flexDirection: 'row',
+    position: 'absolute',
   },
 
-  next: {
-    alignSelf: 'center',
+  text : {
     color: COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,
-    fontSize: 16,
-  },
+    top: 250,
+  }
 });

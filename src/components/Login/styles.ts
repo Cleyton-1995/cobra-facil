@@ -8,15 +8,15 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignSelf: 'center',
-    marginTop: 10,
-    paddingTop: 20,
-    top: 100,
   },
 
   content: {
+    alignItems: 'center',
+    justifyContent: 'center',
     alignSelf: 'center',
     maxWidth: '100%',
-    marginTop: 450,
+    bottom: -15,
+    position: 'absolute',
   },
 
   salutation: {
@@ -26,24 +26,16 @@ export const styles = StyleSheet.create({
     color: COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,
     textAlign: 'center',
-    marginBottom: 20,
+    top: 110,
   },
 
   paragraph: {
+    left: 40,
+    right: 30,
+    maxWidth: '80%',
     textAlign: 'center',
     fontSize:12,
     color: COLORS.BLACK_PRIMARY,
+    top: 130,
   },
-
-  next: {
-    textAlign: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    flexDirection: 'row',    
-    color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-    fontSize: 16,
-    marginTop: 20,
-    marginBottom: 20,
-}
 });

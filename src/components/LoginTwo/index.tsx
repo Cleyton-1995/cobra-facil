@@ -10,7 +10,6 @@ export function LoginTwo() {
   return (
     <View 
     style={styles.container}>
-      <Header/>
       <Image style={styles.content}  source={require('../../assets/image_35-1.png')} />
       <Text style={styles.salutation}>
       Realize cobranças automáticas
