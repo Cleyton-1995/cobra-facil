@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     paddingTop: getStatusBarHeight() + 17,
-    backgroundColor: COLORS.GRAY_TERTIARY,
   },
 
   image: {
@@ -29,54 +28,16 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.BOLD,
   },
 
-  access: {
+  next: {
     width: 300,
     textAlign: 'center',
-    padding: 12,
-    alignItems: 'center',
-    position: 'absolute',
-    top: 490,
-    backgroundColor: COLORS.BLUE_500,
-    borderRadius: 5,
-  },
-
-  registration: {
-    width: 300,
-    textAlign: 'center',
-    padding: 12,
+    padding: 10,
     alignItems: 'center',
     position: 'absolute',
     top: 550,
     backgroundColor: COLORS.WHITE,
     color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-    fontSize: 16,
-    borderRadius: 5,
-  },
-
-  accessColor: {
-    color: COLORS.WHITE,
     fontSize: 16,
     fontFamily: FONTS.BOLD,
-  },
-
-  registrationColor: {
-    color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-    fontSize: 16,
-  },
-
-  password: {
-    position: 'absolute',
-    bottom: 180,
-    left: 175,
-    textDecorationLine: 'underline',
-  },
-  
-  forgotPassword: {
-    color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-    fontSize: 14,
-  },
-
+  }
 });

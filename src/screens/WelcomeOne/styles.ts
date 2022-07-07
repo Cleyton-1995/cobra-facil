@@ -1,31 +1,30 @@
 import { StyleSheet } from 'react-native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { COLORS } from '../../themes/colors';
 import { FONTS } from '../../themes/fonts';
 
 export const styles = StyleSheet.create({
   container: {
+    flex: 1,
     width: '100%',
-    flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
     alignSelf: 'center',
+    paddingTop: getStatusBarHeight() + 17,
   },
 
-  content: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    maxWidth: '100%',
-    top: -180,
+  image: {
+    width: '80%',
+    top: 110,
     position: 'absolute',
   },
 
   salutation: {
-    fontSize: 20,
-    maxWidth: '60%',
-    marginLeft: 70,
-    color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
+    top: 160,
+    width: 245,
+    fontSize: 22,
     textAlign: 'center',
-    top: 170,
+    color:COLORS.BLUE_500,
+    fontFamily: FONTS.BOLD,
   },
 });
