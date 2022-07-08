@@ -9,12 +9,10 @@ export const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'center',
     paddingTop: getStatusBarHeight() + 17,
   },
 
   image: {
-    width: '80%',
     top: 110,
     position: 'absolute',
   },
@@ -29,13 +27,13 @@ export const styles = StyleSheet.create({
   },
 
   next: {
-    width: 300,
-    textAlign: 'center',
     padding: 10,
-    alignItems: 'center',
     position: 'absolute',
     top: 550,
     backgroundColor: COLORS.WHITE,
+  },
+
+  nextColor: {
     color: COLORS.BLUE_500,
     fontSize: 16,
     fontFamily: FONTS.BOLD,

@@ -5,7 +5,7 @@ import { Header } from '../../components/Header';
 
 import { styles } from './styles';
 
-export function Home() {
+export function WelcomeOne() {
   return (
     <View style={styles.container}>
       <Header/>

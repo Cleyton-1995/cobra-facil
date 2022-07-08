@@ -4,7 +4,7 @@ import Button from "../../components/Form/Button";
 import { Header } from "../../components/Header";
 import { styles } from "./styles";
 
-export function Home() {
+export function Welcome() {
   return (
     <View style={styles.container}>
       <Header />

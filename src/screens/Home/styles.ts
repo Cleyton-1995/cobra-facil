@@ -13,22 +13,6 @@ export const styles = StyleSheet.create({
     paddingTop: getStatusBarHeight() + 17,
     backgroundColor: COLORS.GRAY_TERTIARY,
   },
-
-  image: {
-    width: '80%',
-    top: 110,
-    position: 'absolute',
-  },
-
-  salutation: {
-    top: 160,
-    width: 245,
-    fontSize: 22,
-    textAlign: 'center',
-    color:COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-  },
-
   access: {
     width: 300,
     textAlign: 'center',
@@ -65,18 +49,4 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.BOLD,
     fontSize: 16,
   },
-
-  password: {
-    position: 'absolute',
-    bottom: 180,
-    left: 175,
-    textDecorationLine: 'underline',
-  },
-  
-  forgotPassword: {
-    color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-    fontSize: 14,
-  },
-
 });
