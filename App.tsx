@@ -9,9 +9,11 @@ import { StatusBar } from "expo-status-bar";
 
 import { Home } from './src/screens/Home';
 import { Login } from './src/screens/Login';
-import { Welcome } from './src/screens/Welcome';
 import { WelcomeOne } from './src/screens/WelcomeOne';
 import { WelcomeTwo } from './src/screens/WelcomeTwo';
+import { Welcome } from './src/screens/Welcome';
+import { ButtonNew } from './src/ButtonNew';
+import { Routes } from './src/routes';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -25,8 +27,8 @@ export default function App() {
   
   return (
     <>
-      <StatusBar />
-        <Login/>
+      <StatusBar backgroundColor='light' />
+        <Routes/>
     </>
   );
 }
