@@ -7,8 +7,6 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 10,
     alignItems: 'center',
-    position: 'absolute',
-    top: 550,
     backgroundColor: COLORS.WHITE,
   },
   

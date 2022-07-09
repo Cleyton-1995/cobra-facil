@@ -5,15 +5,13 @@ import { FONTS } from '../../../themes/fonts';
 export const styles = StyleSheet.create({
   container: {
     width: '90%',
-    height: 450,
     paddingHorizontal: 16,
     fontSize: 14,
-    padding: 90,
     backgroundColor: COLORS.WHITE,
-    top: 50,
     borderRadius: 5,
+    position: 'relative',
   },
-
+  
   input: {
     alignSelf: 'center',
     borderWidth: 1,
@@ -37,27 +35,9 @@ export const styles = StyleSheet.create({
     bottom: 30,
   },
 
-  login: {
-    color: COLORS.BLUE_500,
-    top: -50,
-    textAlign: 'center',
-    fontSize: 25,
-    fontFamily: FONTS.BOLD,
-  },
-
   icon: {
-    marginLeft : 250,
-    bottom: 105,
-  },
-
-  forgotPassword: {
-    color: COLORS.BLUE_500,
-    fontFamily: FONTS.BOLD,
-    fontSize: 14,
-    position: 'relative',
-    bottom: 45,
-    marginLeft: 140,
-    textDecorationLine: 'underline',
-    borderBottomColor: COLORS.BLUE_500,   
+    right: 30,
+    position: 'absolute',
+    top: 15,
   },
 })

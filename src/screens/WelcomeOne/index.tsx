@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Image, Text} from 'react-native';
+import { Image, Text, View } from 'react-native';
 import Button from '../../components/Form/Button';
 import { Header } from '../../components/Header';
 
@@ -18,7 +18,7 @@ export function WelcomeOne() {
       <Text style={styles.salutation}>
       Cadastre e maneje seus clientes
       </Text>
-      <Button onPress={openWelcomeTwo} label={''}/>
+      <Button onPress={openWelcomeTwo} label="Próximo"/>
     </View>
   );
 }

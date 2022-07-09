@@ -13,13 +13,7 @@ export const styles = StyleSheet.create({
     paddingTop: getStatusBarHeight() + 17,
   },
 
-  image: {
-    top: 130,
-    position: 'absolute',
-  },
-
   salutation: {
-    top: 100,
     width: '80%',
     fontSize: 26,
     textAlign: 'center',
@@ -27,7 +21,7 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.BOLD,
   },
   paragraph: {
-    top: 130,
+    marginBottom: 10,
     width: '80%',
     fontSize: 12,
     textAlign: 'center',

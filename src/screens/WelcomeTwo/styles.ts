@@ -6,20 +6,17 @@ import { FONTS } from '../../themes/fonts';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
+    width: 300,
     justifyContent: 'center',
     alignItems: 'center',
+    alignSelf: 'center',
     paddingTop: getStatusBarHeight() + 17,
   },
 
   image: {
-    top: 110,
-    position: 'absolute',
   },
 
   salutation: {
-    top: 160,
-    width: 245,
     fontSize: 22,
     textAlign: 'center',
     color:COLORS.BLUE_500,
@@ -27,9 +24,10 @@ export const styles = StyleSheet.create({
   },
 
   next: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: 249,
     padding: 10,
-    position: 'absolute',
-    top: 550,
     backgroundColor: COLORS.WHITE,
   },
 

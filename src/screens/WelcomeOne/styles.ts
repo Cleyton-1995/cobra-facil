@@ -15,12 +15,9 @@ export const styles = StyleSheet.create({
 
   image: {
     width: '80%',
-    top: 110,
-    position: 'absolute',
   },
 
   salutation: {
-    top: 160,
     width: 245,
     fontSize: 22,
     textAlign: 'center',

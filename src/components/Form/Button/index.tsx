@@ -1,6 +1,6 @@
 import { AntDesign } from "@expo/vector-icons";
 import React from "react";
-import { TouchableOpacity, TouchableOpacityProps, Text } from "react-native";
+import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 import { styles } from "./styles";
 
@@ -18,7 +18,7 @@ const Button = ({ label, ...rest }: ButtonProps): JSX.Element => {
       activeOpacity={0.8}
     >
       <Text style={styles.buttonText}>
-        Próximo  
+        {label} 
         <AntDesign name="right" size={15} color="#009BF4" />
         </Text>
     </TouchableOpacity>
