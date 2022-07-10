@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Image, Text} from "react-native";
 import Button from "../../components/Form/Button";
-import { Header } from "../../components/Header";
+import { Header } from "../../components/Header/HeaderWelcome";
 
 import { styles } from "./styles";
 

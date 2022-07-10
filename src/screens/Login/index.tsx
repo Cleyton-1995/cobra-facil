@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { Input } from "../../components/Form/Input";
-import { Header } from "../../components/Header";
+import { Header } from "../../components/Header/HeaderWelcome";
 
 import { styles } from "./styles";
 

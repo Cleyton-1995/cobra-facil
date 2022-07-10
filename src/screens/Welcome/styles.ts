@@ -19,9 +19,10 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     color:COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,
+    marginBottom: 15,
   },
   paragraph: {
-    marginBottom: 10,
+    marginBottom: 15,
     width: '80%',
     fontSize: 12,
     textAlign: 'center',

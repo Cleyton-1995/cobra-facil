@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.BLUE_500,
     borderRadius: 5,
+    marginBottom: 10,
   },
 
   registration: {
@@ -64,6 +65,8 @@ export const styles = StyleSheet.create({
     width: '90%',
     alignSelf: 'center',
     alignItems: 'center',
+    marginBottom: 20,
+    paddingBottom: 20,
   },
 
   

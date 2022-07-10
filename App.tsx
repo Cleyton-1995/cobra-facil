@@ -7,6 +7,8 @@ import {
 import AppLoading from "expo-app-loading";
 import { StatusBar } from "expo-status-bar";
 import { Routes } from './src/routes';
+import { Home } from './src/screens/Home';
+import { RecoverPassword } from './src/screens/RecoverPassword';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -21,7 +23,7 @@ export default function App() {
   return (
     <>
       <StatusBar backgroundColor='light' />
-        <Routes/>
+        <RecoverPassword/>
     </>
   );
 }

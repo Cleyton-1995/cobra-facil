@@ -1,19 +1,19 @@
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../../themes/colors';
 import { FONTS } from '../../../themes/fonts';
+
 export const styles = StyleSheet.create({
   container: {
-    width: 300,
-    textAlign: 'center',
-    padding: 10,
-    alignItems: 'center',
-    backgroundColor: COLORS.WHITE,
-    bottom: -30,
+    flex: 1,
+    width: "90%",
+    flexDirection: 'row',
+    left: 0,
+    margin: 10,
   },
-  
-  buttonText: {
+  back: {
     color: COLORS.BLUE_500,
-    fontSize: 16,
     fontFamily: FONTS.BOLD,
+    top: -18,
+    marginLeft: 20,
   }
-})
+});

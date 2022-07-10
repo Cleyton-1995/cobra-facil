@@ -6,7 +6,7 @@ import { MostHeaders } from "../../components/Header/MostHeaders";
 
 import { styles } from "./styles";
 
-export function Home() {
+export function RecoverPassword() {
   return (
     <View style={styles.container}>
       <BackButton title="Voltar" />

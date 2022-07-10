@@ -1,33 +1,33 @@
-import { StyleSheet } from 'react-native';
-import { COLORS } from '../../../themes/colors';
-import { FONTS } from '../../../themes/fonts';
+import { StyleSheet } from "react-native";
+import { COLORS } from "../../../themes/colors";
 
 export const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    width: "90%",
     paddingHorizontal: 16,
     fontSize: 14,
     backgroundColor: COLORS.WHITE,
     borderRadius: 5,
-    position: 'relative',
   },
-  
+
   input: {
-    alignSelf: 'center',
+    alignSelf: "center",
     borderWidth: 1,
     borderColor: COLORS.GRAY_PRIMARY,
     backgroundColor: COLORS.WHITE,
     borderRadius: 5,
-    width: '100%',
+    width: 300,
     paddingLeft: 16,
     padding: 10,
     margin: 15,
     bottom: 35,
+    fontSize:11,
   },
 
   email: {
     color: COLORS.BLUE_500,
-  bottom: 30,
+    bottom: 30,
+    fontSize:11,
   },
 
   password: {
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
 
   icon: {
     right: 30,
-    position: 'absolute',
+    position: "absolute",
     top: 15,
   },
-})
+});
