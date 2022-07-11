@@ -38,6 +38,6 @@ export const styles = StyleSheet.create({
   icon: {
     right: 30,
     position: "absolute",
-    top: 15,
+    top: 12,
   },
 });

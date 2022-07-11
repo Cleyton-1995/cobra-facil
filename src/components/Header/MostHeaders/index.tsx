@@ -13,7 +13,6 @@ export function MostHeaders({title}: HeaderPtops) {
       <Text style={styles.title}>
       {title}
       </Text>
-      <Image style={styles.image} resizeMode="contain"  source={require('../../../assets/Group_324.png')} />
     </View>
   );
 }

@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     width: "90%",
-    top: 100,
+    top: 80,
     alignSelf: "center",
     position: "absolute",
   },
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
 
   image: {
     width: 100,
-    left: 40,
+    left: 50,
     top: -10,
   },
 });

@@ -5,10 +5,9 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 import AppLoading from "expo-app-loading";
-import { StatusBar } from "expo-status-bar";
 import { Routes } from './src/routes';
+import { StatusBar } from 'react-native';
 import { Home } from './src/screens/Home';
-import { RecoverPassword } from './src/screens/RecoverPassword';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -22,8 +21,8 @@ export default function App() {
   
   return (
     <>
-      <StatusBar backgroundColor='light' />
-        <RecoverPassword/>
+        <StatusBar barStyle="light-content" hidden={false} backgroundColor="light"/>
+        <Routes/>
     </>
   );
 }

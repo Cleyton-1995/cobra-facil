@@ -33,12 +33,13 @@ export const styles = StyleSheet.create({
   },
 
   mainContainer: {
-    top: -150,
+    top: 150,
     backgroundColor:  COLORS.WHITE,
     width: '90%',
     alignItems: 'center',
-    paddingBottom: 20,
+    paddingBottom: 200,
     paddingTop: 80,
+    borderRadius: 5,
   },
 
   email: {

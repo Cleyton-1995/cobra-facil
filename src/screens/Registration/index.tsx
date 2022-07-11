@@ -8,12 +8,16 @@ import { MostHeaders } from "../../components/Header/MostHeaders";
 
 import { styles } from "./styles";
 
-export function Home() {
+export function Registrarion() {
+  const navigation = useNavigation();
+  function backScreenLogin() {
+    navigation.navigate('login')
+  }
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
-        <BackButton title="Voltar" />
+        <BackButton onPress={backScreenLogin} title="Voltar" />
         <MostHeaders title="Cadastre-se" />
         <ImageHeaders />
 
@@ -32,7 +36,7 @@ export function Home() {
         </View>
 
         <TouchableOpacity style={styles.access} activeOpacity={0.8}>
-          <Text style={styles.accessColor}>Enviar e-mail</Text>
+          <Text style={styles.accessColor}>Finalizar Cadastro</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

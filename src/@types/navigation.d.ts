@@ -5,6 +5,8 @@ export declare global {
       welcomeOne: undefined;
       welcomeTwo: undefined;
       login: undefined;
+      recoverPassword: undefined;
+      registration: undefined;
     }
   }
 }

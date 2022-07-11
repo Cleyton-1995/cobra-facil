@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     paddingTop: getStatusBarHeight() + 17,
+    top: 20,
   },
   access: {
     width: 300,
@@ -66,7 +67,7 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     alignItems: 'center',
     marginBottom: 20,
-    paddingBottom: 20,
+    paddingBottom: 50,
   },
 
   
@@ -80,4 +81,9 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: COLORS.BLUE_500,   
   },
+
+  email: {
+    alignItems: 'center',
+    width: "110%",
+  }
 });

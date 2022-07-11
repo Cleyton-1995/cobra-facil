@@ -1,17 +1,24 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { BackButton } from "../../components/Form/BackButton";
 import { Input } from "../../components/Form/Input";
+import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { MostHeaders } from "../../components/Header/MostHeaders";
 
 import { styles } from "./styles";
 
 export function RecoverPassword() {
+  const navigation = useNavigation();
+  function backScreenLogin() {
+    navigation.navigate('login');
+  }
   return (
-    <View style={styles.container}>
-      <BackButton title="Voltar" />
+    <ScrollView>
+    <View  style={styles.container}>
+      <BackButton onPress={backScreenLogin} title="Voltar" />
       <MostHeaders title="Recuperar Senha" />
-
+      <ImageHeaders/>
       <View style={styles.mainContainer}>
         <Text style={styles.text}>
           Para recuperar a sua senha, você precisa fornecer o e-mail da sua
@@ -26,5 +33,7 @@ export function RecoverPassword() {
         </TouchableOpacity>
       </View>
     </View>
+    </ScrollView>
+
   );
 }

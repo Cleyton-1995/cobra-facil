@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     width: "90%",
     flexDirection: 'row',
     left: 0,
-    margin: 10,
+    margin: -10,
   },
   back: {
     color: COLORS.BLUE_500,
