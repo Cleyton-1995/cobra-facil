@@ -8,13 +8,14 @@ interface InputProps {
   label: string;
   placeholder: string;
   type?: string;
+  color?: string;
 }
 
-export function Input({ label, placeholder, type = "text" }: InputProps) {
+export function Input({ label, placeholder, type = "text", color }: InputProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.email}>{label}</Text>
-      <TextInput style={styles.input} placeholder={placeholder} />
+      <TextInput style={styles.input} placeholder={placeholder}  />
       {type === "password" && (
         <TouchableOpacity style={styles.icon}>
           <Ionicons name="eye" color="COLORS.GRAY_PRIMARY" size={20} />

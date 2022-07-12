@@ -21,8 +21,8 @@ export default function App() {
   
   return (
     <>
-        <StatusBar barStyle="light-content" hidden={false} backgroundColor="light"/>
-        <Routes/>
+        <StatusBar barStyle="dark-content" hidden={false} backgroundColor="light"/>
+        <Home/>
     </>
   );
 }
