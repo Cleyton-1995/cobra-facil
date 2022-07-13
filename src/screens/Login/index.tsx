@@ -15,6 +15,10 @@ export function Login() {
   function register() {
     navigation.navigate("registration");
   }
+
+  function login() {
+    navigation.navigate("homepage");
+  }
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -31,7 +35,7 @@ export function Login() {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.access} activeOpacity={0.8}>
-            <Text style={styles.accessColor}>Acessar sua conta</Text>
+            <Text onPress={login} style={styles.accessColor}>Acessar sua conta</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.registration} activeOpacity={0.8}>
             <Text onPress={register} style={styles.registrationColor}>

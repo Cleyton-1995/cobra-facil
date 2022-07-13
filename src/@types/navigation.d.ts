@@ -7,6 +7,7 @@ export declare global {
       login: undefined;
       recoverPassword: undefined;
       registration: undefined;
+      homepage: undefined;
     }
   }
 }
