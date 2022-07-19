@@ -6,16 +6,17 @@ import { styles } from "./styles";
 
 interface HeaderPtops {
   title: string;
+  onPress: () => void;
 }
 
-export function ProfileHeaders({ title }: HeaderPtops) {
+export function ProfileHeaders({ title, onPress }: HeaderPtops) {
   return (
     <View style={styles.container}>
       <AntDesign style={styles.profile} name="user" size={24} color="#0073FB" />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subtitle}>Que bom ter você aqui.</Text>
       <TouchableOpacity activeOpacity={0.8}>
-        <Entypo style={styles.entypo} name="login" size={24} color="white" />
+        <Entypo onPress={onPress} style={styles.entypo} name="login" size={24} color="white" />
       </TouchableOpacity>
       <View>
         <Text style={styles.balance}>Saldo em conta</Text>

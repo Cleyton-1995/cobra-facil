@@ -8,6 +8,7 @@ export declare global {
       recoverPassword: undefined;
       registration: undefined;
       homepage: undefined;
+      myprofile: undefined;
     }
   }
 }

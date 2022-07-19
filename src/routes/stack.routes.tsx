@@ -7,6 +7,7 @@ import { WelcomeTwo } from "../screens/WelcomeTwo";
 import { RecoverPassword } from "../screens/RecoverPassword";
 import { Registrarion } from "../screens/Registration";
 import { HomePage } from "../screens/HomePage";
+import { MyProfile } from "../screens/MyProfile";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ export function StackRoutes () {
       <Screen name="recoverPassword" component={RecoverPassword} />
       <Screen name="registration" component={Registrarion} />
       <Screen name="homepage" component={HomePage} />
+      <Screen name="myprofile" component={MyProfile} />
     </Navigator>
   );
 }
