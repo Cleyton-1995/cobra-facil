@@ -1,6 +1,6 @@
 export const COLORS = {
   WHITE: '#FFFFFF',
-  BLUE_300: '#63B3ED',
+  BLUE_300: '#80AEDD',
   BLUE_500: '#0073FB',
   RED_500: '#E53E3E',
   ORANGE: '#FF7A29',

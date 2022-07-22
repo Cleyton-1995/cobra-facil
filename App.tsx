@@ -1,4 +1,5 @@
 import React from 'react';
+import "react-native-gesture-handler";
 import {
   useFonts,
   Roboto_400Regular,
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <>
         <StatusBar barStyle={'light-content'} backgroundColor="light"/>
-        <Routes/>
+        <Home />
     </>
   );
 }
