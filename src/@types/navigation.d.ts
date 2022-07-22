@@ -9,6 +9,7 @@ export declare global {
       registration: undefined;
       homepage: undefined;
       myprofile: undefined;
+      newcharge: undefined;
     }
   }
 }
