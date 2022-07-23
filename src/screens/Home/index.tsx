@@ -13,68 +13,54 @@ import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { MostHeaders } from "../../components/Header/MostHeaders";
 import { Profile } from "../../components/Header/Profile";
-
 import { styles } from "./styles";
 import Button from "../../components/Form/Button";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Feather } from "@expo/vector-icons";
 
 export function Home() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <BackButton title="Voltar" />
-        <MostHeaders title="Nova Cobrança" />
+        <View style={styles.back}>
+          <BackButton title="Voltar" />
+        </View>
+        <MostHeaders title="Seus Clientes" />
         <ImageHeaders />
+        <TextInput placeholder="Pesquisar     🔍" style={styles.search} />
 
-        <View style={styles.input}>
-          <Text style={styles.title}>Nome da Cobrança</Text>
-          <TextInput
-            style={styles.textInput}
-            placeholder="Dê um apelido para a cobrança"
-          />
+        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
+          <Text style={styles.title}>Felipe André Roberto</Text>
+          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
+          <AntDesign style={styles.icon} name="down" size={18} color="black" />
+          <Text style={styles.circleBlue} />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
+          <Text style={styles.title}>Jonathan Luiz</Text>
+          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
+          <AntDesign style={styles.icon} name="down" size={18} color="black" />
+          <Text style={styles.circleBlue} />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
+          <Text style={styles.title}>Henrique Cardoso</Text>
+          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
+          <AntDesign style={styles.icon} name="down" size={18} color="black" />
+          <Text style={styles.circleRed} />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
+          <Text style={styles.title}>Paulo Fernando</Text>
+          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
+          <AntDesign style={styles.icon} name="down" size={18} color="black" />
+          <Text style={styles.circleBlue} />
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
+          <Text style={styles.title}>José Roberto</Text>
+          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
+          <AntDesign style={styles.icon} name="down" size={18} color="black" />
+          <Text style={styles.circleRed } />
+        </TouchableOpacity>
 
-          <Text style={styles.secondTitle}>Descrição</Text>
-          <TextInput
-            style={styles.secondTextInput}
-            placeholder="Descreva a cobrança"
-          />
-        </View>
-
-        <View style={styles.secondInput}>
-          <Text style={styles.charge}>Repetir cobrança</Text>
-          <TextInput style={styles.repeatCharge} placeholder="Todos os meses" />
-          <TouchableOpacity activeOpacity={0.8} style={styles.iconRepeat}>
-          <AntDesign name="down" size={18} color="black" />
-          </TouchableOpacity>
-          <Text style={styles.value}>Valor</Text>
-          <TextInput style={styles.values} placeholder="R$ _ _" />
-
-          <Text style={styles.repetition}>Repetições</Text>
-          <TextInput style={styles.repetitions} placeholder="_ _" />
-        </View>
-
-        <View style={styles.dueDate}>
-          <Text style={styles.date}>Data de vencimento</Text>
-          <TextInput style={styles.textInput} placeholder="DD / MM / AAAA" />
-        </View>
-
-        <View style={styles.selectBilling}>
-          <Text style={styles.select}>Selecione cobranças para esse cliente</Text>
-          <TouchableOpacity style={styles.iconSelect} activeOpacity={0.8}>
-          <AntDesign name="down" size={18} color="black" />
-          </TouchableOpacity>
-          <TextInput style={styles.textInput} placeholder="Selecione o tipo de cobrança" />
-          
-          <View style={styles.information}>
-          <Text style={styles.name}>José Roberto</Text>
-          <Text style={styles.cnpj}>Pessoa física - 400.000.0001-22</Text>
-          </View>
-        </View>
-
-        <TouchableOpacity activeOpacity={0.8} >
-          <Text style={styles.button}>
-            Salvar e publicar cobrança
-          </Text>
+        <TouchableOpacity activeOpacity={0.8}>
+          <Text style={styles.btn}>Adicionar um novo cliente</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
