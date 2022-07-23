@@ -13,7 +13,7 @@ import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 
-export function Home() {
+export function NewCustomer () {
   return (
     <ScrollView>
       <View style={styles.container}>

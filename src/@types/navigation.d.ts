@@ -11,6 +11,7 @@ export declare global {
       myprofile: undefined;
       newcharge: undefined;
       customerlist: undefined;
+      newcustomer: undefined;
     }
   }
 }

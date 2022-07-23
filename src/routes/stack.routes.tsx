@@ -10,6 +10,7 @@ import { HomePage } from "../screens/HomePage";
 import { MyProfile } from "../screens/MyProfile";
 import { NewCharge } from "../screens/NewCharge";
 import { CustomerList } from "../screens/CustomerList";
+import { NewCustomer } from "../screens/NewCustomer";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ export function StackRoutes () {
       <Screen name="myprofile" component={MyProfile} />
       <Screen name="newcharge" component={NewCharge} />
       <Screen name="customerlist" component={CustomerList} />
+      <Screen name="newcustomer" component={ NewCustomer} />
     </Navigator>
   );
 }
