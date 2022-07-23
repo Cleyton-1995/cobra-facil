@@ -13,12 +13,20 @@ import { MostHeaders } from "../../components/Header/MostHeaders";
 
 import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export function NewCharge() {
+  const navigation = useNavigation();
+  function backScreenHome() {
+    navigation.navigate("homepage");
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
-        <BackButton title="Voltar" />
+        <View style={styles.back}>
+          <BackButton onPress={backScreenHome} title="Voltar" />
+        </View>
         <MostHeaders title="Nova Cobrança" />
         <ImageHeaders />
 

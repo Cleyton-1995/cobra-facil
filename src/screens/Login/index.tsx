@@ -34,7 +34,7 @@ export function Login() {
               Esqueci minha senha
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.access} activeOpacity={0.8}>
+          <TouchableOpacity onPress={login} style={styles.access} activeOpacity={0.8}>
             <Text onPress={login} style={styles.accessColor}>Acessar sua conta</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.registration} activeOpacity={0.8}>

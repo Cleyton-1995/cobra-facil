@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
 
   plus: {
-    bottom: 200,
+    bottom: 180,
     marginLeft: 40,
     backgroundColor: COLORS.GRAY_QUINTENAY,
     width: 30,
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
   },
 
   addusergroup: {
-    bottom: 160,
+    bottom: 140,
     marginLeft: 180,
     backgroundColor: COLORS.GRAY_QUINTENAY,
     width: 30,
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
   },
 
   dollar: {
-    bottom: 190,
+    bottom: 170,
     marginLeft: 40,
     backgroundColor: COLORS.GRAY_QUINTENAY,
     width: 30,
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
   },
 
   dollar_sign: {
-    bottom: 230,
+    bottom: 210,
     marginLeft: 210,
     backgroundColor: COLORS.GRAY_QUINTENAY,
     width: 30,
@@ -54,5 +54,49 @@ export const styles = StyleSheet.create({
     paddingTop: 2,
     paddingLeft: 3,
     borderRadius : 5,
-  }
+  },
+
+  charge: {
+    backgroundColor: COLORS.WHITE,
+    width: 160,
+    height: 90,
+    marginTop: -60,
+    marginLeft:  30,
+    borderRadius: 5,
+    paddingTop: 60,
+    paddingLeft: 10,
+  },
+  
+  invoicing: {
+    backgroundColor: COLORS.WHITE,
+    width: 130,
+    height: 90,
+    marginTop: -90,
+    marginLeft:  200,
+    borderRadius: 5,
+    paddingTop: 60,
+    paddingLeft: 10,
+  },
+  
+  transfer: {
+    backgroundColor: COLORS.WHITE,
+    width: 130,
+    height: 90,
+    marginTop: 10,
+    marginLeft:  30,
+    borderRadius: 5,
+    paddingTop: 60,
+    paddingLeft: 10,
+  },
+  
+  customers: {
+    backgroundColor: COLORS.WHITE,
+    width: 160,
+    height: 90,
+    marginTop: -90,
+    marginLeft:  170,
+    borderRadius: 5,
+    paddingTop: 60,
+    paddingLeft: 10,
+  },
 });

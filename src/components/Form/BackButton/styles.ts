@@ -9,10 +9,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     left: 0,
     margin: -10,
-    marginLeft: 15,
-    marginTop: 20,
-    
   },
+  
   back: {
     color: COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,

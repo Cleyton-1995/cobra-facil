@@ -1,28 +1,16 @@
-import { AntDesign } from "@expo/vector-icons";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
-import { styles } from "./styles";
+interface ButtonHomePageProps {
+  onPress?: () => void;
+  title: string;
+}
 
-export function ButtonHomePage() {
+export function ButtonHomePage( { onPress, title}: ButtonHomePageProps ) {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity disabled>
-        <Text style={styles.charge}>
-          Criar Cobrança
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity disabled>
-        <Text style={styles.invoicing}>Faturameto</Text>
-      </TouchableOpacity>
-      <TouchableOpacity disabled>
-        <Text style={styles.transfer}>Transferir</Text>
-      </TouchableOpacity>
-      <TouchableOpacity disabled>
-        <Text style={styles.customers}>Clietes</Text>
-      </TouchableOpacity>
-      <TouchableOpacity disabled>
-        <Text></Text>
+    <View>
+      <TouchableOpacity onPress={onPress} >
+        <Text > {title} </Text>
       </TouchableOpacity>
     </View>
   );

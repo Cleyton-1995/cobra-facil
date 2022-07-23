@@ -8,8 +8,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  back: {
+    top: 30,
+    left: 30,
+  },
+
   input: {
-    marginTop: 100,
+    marginTop: 120,
     marginBottom: 20,
     backgroundColor: COLORS.WHITE,
     width: 325,
