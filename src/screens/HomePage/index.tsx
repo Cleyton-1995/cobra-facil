@@ -23,7 +23,7 @@ export function HomePage() {
     navigation.navigate("newcharge");
   }
   function customers() {
-    navigation.navigate("newcharge");
+    navigation.navigate("customerlist");
   }
 
   return (

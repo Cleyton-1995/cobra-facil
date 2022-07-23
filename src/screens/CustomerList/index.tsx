@@ -16,13 +16,19 @@ import { Profile } from "../../components/Header/Profile";
 import { styles } from "./styles";
 import Button from "../../components/Form/Button";
 import { AntDesign, Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export function CustomerList() {
+  const navigation = useNavigation();
+  function backScreenHome() {
+    navigation.navigate("homepage");
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.back}>
-          <BackButton title="Voltar" />
+          <BackButton onPress={backScreenHome} title="Voltar" />
         </View>
         <MostHeaders title="Seus Clientes" />
         <ImageHeaders />
