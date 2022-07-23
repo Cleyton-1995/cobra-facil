@@ -12,13 +12,19 @@ import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export function NewCustomer () {
+  const navigation = useNavigation();
+  function backScreenHome() {
+    navigation.navigate("customerlist");
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.back}>
-          <BackButton title="Voltar" />
+          <BackButton onPress={backScreenHome} title="Voltar" />
         </View>
         <MostHeaders title="Dados do cliente" />
         <ImageHeaders />

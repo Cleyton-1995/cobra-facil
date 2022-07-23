@@ -2,7 +2,6 @@ import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import { ImageHeaders } from "../../Header/ImageHeaders";
 
 import { styles } from "./styles";
 

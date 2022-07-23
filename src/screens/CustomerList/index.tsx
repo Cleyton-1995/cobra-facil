@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "react-native-gesture-handler";
 import {
   ScrollView,
@@ -8,20 +8,19 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { BackButton } from "../../components/Form/BackButton";
-import { BackButtonWhite } from "../../components/Form/BackButtonWhite";
 import { ImageHeaders } from "../../components/Header/ImageHeaders";
-import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { MostHeaders } from "../../components/Header/MostHeaders";
-import { Profile } from "../../components/Header/Profile";
 import { styles } from "./styles";
-import Button from "../../components/Form/Button";
-import { AntDesign, Feather } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 export function CustomerList() {
   const navigation = useNavigation();
   function backScreenHome() {
     navigation.navigate("homepage");
+  }
+  function addNewCustomer() {
+    navigation.navigate("newcustomer");
   }
 
   return (
@@ -65,8 +64,8 @@ export function CustomerList() {
           <Text style={styles.circleRed } />
         </TouchableOpacity>
 
-        <TouchableOpacity activeOpacity={0.8}>
-          <Text style={styles.btn}>Adicionar um novo cliente</Text>
+        <TouchableOpacity onPress={ addNewCustomer} activeOpacity={0.8}>
+          <Text onPress={ addNewCustomer} style={styles.btn}>Adicionar um novo cliente</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

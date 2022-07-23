@@ -71,7 +71,7 @@ export function NewCharge() {
           
           <View style={styles.information}>
           <Text style={styles.name}>José Roberto</Text>
-          <Text style={styles.cnpj}>Pessoa física - 400.000.0001-22</Text>
+          <Text style={styles.cnpj}>Pessoa física - 400.000.000-22</Text>
           </View>
         </View>
 
