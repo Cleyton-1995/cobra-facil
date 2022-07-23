@@ -10,6 +10,7 @@ export declare global {
       homepage: undefined;
       myprofile: undefined;
       newcharge: undefined;
+      customerlist: undefined;
     }
   }
 }
