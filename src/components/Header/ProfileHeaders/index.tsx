@@ -6,7 +6,7 @@ import { styles } from "./styles";
 
 interface HeaderPtops {
   title: string;
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 export function ProfileHeaders({ title, onPress }: HeaderPtops) {

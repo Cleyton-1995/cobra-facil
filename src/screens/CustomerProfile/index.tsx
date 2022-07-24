@@ -7,16 +7,11 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { BackButton } from "../../components/Form/BackButton";
-import { ImageHeaders } from "../../components/Header/ImageHeaders";
-import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
-import { ProfileHeaders } from "../../components/Header/ProfileHeaders";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
-import { BackButtonWhite } from "../../components/Form/BackButtonWhite";
 
-export function Home() {
+export function CustomerProfile() {
   return (
     <ScrollView>
       <View style={styles.container}>
