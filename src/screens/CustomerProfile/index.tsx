@@ -10,14 +10,20 @@ import {
 import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
+import { useNavigation } from "@react-navigation/native";
 
 export function CustomerProfile() {
+  const navigation = useNavigation();
+  function back() {
+    navigation.navigate("customerlist");
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
         <TouchableOpacity activeOpacity={0.8}>
           <AntDesign style={styles.icon} name="left" size={15} color="white" />
-          <Text style={styles.back}>Voltar</Text>
+          <Text onPress={back} style={styles.back}>Voltar</Text>
         </TouchableOpacity>
         <Text style={styles.title}>
           Perfil do Cliente

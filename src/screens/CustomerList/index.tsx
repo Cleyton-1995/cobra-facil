@@ -22,6 +22,9 @@ export function CustomerList() {
   function addNewCustomer() {
     navigation.navigate("newcustomer");
   }
+  function openCustomerProfile() {
+    navigation.navigate("customerprofile");
+  }
 
   return (
     <ScrollView>
@@ -33,9 +36,9 @@ export function CustomerList() {
         <ImageHeaders />
         <TextInput placeholder="Pesquisar     🔍" style={styles.search} />
 
-        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
-          <Text style={styles.title}>Felipe André Roberto</Text>
-          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
+        <TouchableOpacity onPress={openCustomerProfile} activeOpacity={0.8} style={styles.input}>
+          <Text onPress={openCustomerProfile} style={styles.title}>Felipe André Roberto</Text>
+          <Text onPress={openCustomerProfile} style={styles.textInput}>Mostrar informações pessoais </Text>
           <AntDesign style={styles.icon} name="down" size={18} color="black" />
           <Text style={styles.circleBlue} />
         </TouchableOpacity>
