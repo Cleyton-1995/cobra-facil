@@ -31,7 +31,7 @@ export function Registrarion() {
         <View style={styles.emailContainer}>
           <View style={styles.email}>
             <Input label="E-mail" placeholder="Seu e-mail" />
-            <Input label="Senha" placeholder="Sua senha" type="password" />
+            <Input label="Senha" placeholder="Sua senha" secureTextEntry   />
           </View>
         </View>
 

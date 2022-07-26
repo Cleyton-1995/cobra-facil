@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Input } from "../../components/Form/Input";
 import { Header } from "../../components/Header/HeaderWelcome";
@@ -7,6 +7,8 @@ import { Header } from "../../components/Header/HeaderWelcome";
 import { styles } from "./styles";
 
 export function Login() {
+  const [ email, setEmail] = useState("");
+
   const navigation = useNavigation();
   function openRecoverPassword() {
     navigation.navigate("recoverPassword");
@@ -19,6 +21,7 @@ export function Login() {
   function login() {
     navigation.navigate("homepage");
   }
+  
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -26,13 +29,18 @@ export function Login() {
         <View style={styles.mainContainer}>
           <Text style={styles.login}>Acesse sua conta</Text>
           <View style={styles.email}>
-            <Input label="E-mail" placeholder="Seu e-mail" />
+            <Input
+              label="E-mail"
+              placeholder="Seu e-mail"
+              value={email}
+              onChageText={setEmail}
+            />
             <Input
               label="Senha"
               placeholder="Sua senha"
               type="password"
               secureTextEntry
-              keyboarrdType="email-address"
+
             />
           </View>
           <TouchableOpacity activeOpacity={0.8}>
