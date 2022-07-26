@@ -21,13 +21,13 @@ export const styles = StyleSheet.create({
     padding: 10,
     margin: 15,
     bottom: 35,
-    fontSize:11,
+    fontSize:15,
   },
 
   email: {
     color: COLORS.BLUE_500,
     bottom: 30,
-    fontSize:11,
+    fontSize:16,
   },
 
   password: {
@@ -38,6 +38,6 @@ export const styles = StyleSheet.create({
   icon: {
     right: 30,
     position: "absolute",
-    top: 12,
+    top: 19,
   },
 });
