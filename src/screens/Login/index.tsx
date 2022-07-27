@@ -7,7 +7,7 @@ import { Header } from "../../components/Header/HeaderWelcome";
 import { styles } from "./styles";
 
 export function Login() {
-  const [ email, setEmail] = useState("");
+  // const [ email, setEmail] = useState("");
 
   const navigation = useNavigation();
   function openRecoverPassword() {
@@ -32,8 +32,8 @@ export function Login() {
             <Input
               label="E-mail"
               placeholder="Seu e-mail"
-              value={email}
-              onChageText={setEmail}
+              // value={email}
+              // onChageText={setEmail}
             />
             <Input
               label="Senha"

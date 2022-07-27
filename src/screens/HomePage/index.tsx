@@ -72,3 +72,4 @@ export function HomePage() {
     </ScrollView>
   );
 }
+// BsFillXDiamondFill

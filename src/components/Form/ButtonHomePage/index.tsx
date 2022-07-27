@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 interface ButtonHomePageProps {
   onPress?: () => void;
-  title: string;
+  title?: string;
 }
 
 export function ButtonHomePage( { onPress, title}: ButtonHomePageProps ) {
