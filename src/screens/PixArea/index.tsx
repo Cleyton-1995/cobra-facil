@@ -17,7 +17,7 @@ import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { BackButtonWhite } from "../../components/Form/BackButtonWhite";
 import { ButtonHomePage } from "../../components/Form/ButtonHomePage";
 
-export function Home() {
+export function PixArea() {
   return (
     <ScrollView>
       <View style={styles.container}>

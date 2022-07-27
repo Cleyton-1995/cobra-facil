@@ -13,6 +13,7 @@ export declare global {
       customerlist: undefined;
       newcustomer: undefined;
       customerprofile: undefined;
+      pixarea: undefined;
     }
   }
 }

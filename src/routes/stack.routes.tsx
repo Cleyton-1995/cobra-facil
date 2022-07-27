@@ -12,6 +12,7 @@ import { NewCharge } from "../screens/NewCharge";
 import { CustomerList } from "../screens/CustomerList";
 import { NewCustomer } from "../screens/NewCustomer";
 import { CustomerProfile } from "../screens/CustomerProfile";
+import { PixArea } from "../screens/PixArea";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -33,6 +34,7 @@ export function StackRoutes () {
       <Screen name="customerlist" component={CustomerList} />
       <Screen name="newcustomer" component={ NewCustomer} />
       <Screen name="customerprofile" component={ CustomerProfile } />
+      <Screen name="pixarea" component={ PixArea } />
     </Navigator>
   );
 }
