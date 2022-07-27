@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { styles } from "./styles";
-import { AntDesign, Entypo, Fontisto, Ionicons, MaterialCommunityIcons, MaterialIcons, Octicons } from "@expo/vector-icons";
+import { AntDesign, Fontisto, Ionicons, MaterialCommunityIcons, MaterialIcons, Octicons } from "@expo/vector-icons";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { ButtonHomePage } from "../../components/Form/ButtonHomePage";
 import { useNavigation } from "@react-navigation/native";
@@ -17,6 +17,11 @@ export function PixArea() {
   function back() {
     navigation.navigate("homepage");
   }
+
+  function transfer() {
+    navigation.navigate("transfervalue");
+  }
+  
   
   return (
     <ScrollView>
@@ -34,9 +39,8 @@ export function PixArea() {
       </View>
 
       <View style={styles.content}>
-        <TouchableOpacity activeOpacity={0.98} style={styles.transfer}>
-          <ButtonHomePage />
-          <Text style={styles.titlesBottom} >
+        <TouchableOpacity onPress={transfer} activeOpacity={0.98} style={styles.transfer}>
+          <Text style={styles.titleBottom} >
             Transferir
           </Text>
           <MaterialCommunityIcons style={styles.copy} name="cash-minus" size={35} color="#0073FB" />

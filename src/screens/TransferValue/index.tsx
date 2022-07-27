@@ -12,14 +12,19 @@ import {
 } from "@expo/vector-icons";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import InputCurrency from "../../components/Form/InputCurrency";
+import { useNavigation } from "@react-navigation/native";
 
 export function TransferValue() {
+  const navigation = useNavigation();
+  function back() {
+    navigation.navigate("pixarea");
+  }
   const [valor, setValor] = React.useState<number | null>(0);
 
   return (
     <ScrollView>
       <View style={styles.container}>
-        <TouchableOpacity activeOpacity={0.8}>
+        <TouchableOpacity onPress={back} activeOpacity={0.8}>
           <AntDesign style={styles.icon} name="left" size={15} color="white" />
           <Text style={styles.back}>Voltar</Text>
         </TouchableOpacity>

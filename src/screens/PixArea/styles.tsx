@@ -117,6 +117,12 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
+  titleBottom: {
+    marginTop: 30,
+    marginBottom: -40,
+    textAlign: 'center',
+  },
+
   copy: {
     position: 'absolute',
     marginHorizontal: 33,
