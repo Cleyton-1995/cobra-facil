@@ -14,6 +14,7 @@ export declare global {
       newcustomer: undefined;
       customerprofile: undefined;
       pixarea: undefined;
+      transfervalue: undefined;
     }
   }
 }
