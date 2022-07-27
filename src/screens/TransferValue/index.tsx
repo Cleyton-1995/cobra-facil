@@ -2,31 +2,18 @@ import React from "react";
 import "react-native-gesture-handler";
 import {
   ScrollView,
-  TextInput,
   View,
   Text,
   TouchableOpacity,
 } from "react-native";
-import { BackButton } from "../../components/Form/BackButton";
-import { ImageHeaders } from "../../components/Header/ImageHeaders";
-import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
 import {
   AntDesign,
-  Entypo,
-  Fontisto,
-  Ionicons,
-  MaterialCommunityIcons,
-  MaterialIcons,
-  Octicons,
 } from "@expo/vector-icons";
-import { ProfileHeaders } from "../../components/Header/ProfileHeaders";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
-import { BackButtonWhite } from "../../components/Form/BackButtonWhite";
-import { ButtonHomePage } from "../../components/Form/ButtonHomePage";
 import InputCurrency from "../../components/Form/InputCurrency";
 
-export function Home() {
+export function TransferValue() {
   const [valor, setValor] = React.useState<number | null>(0);
 
   return (

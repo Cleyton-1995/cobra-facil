@@ -20,7 +20,7 @@ export function HomePage() {
     navigation.navigate("newcharge");
   }
   function transfer() {
-    navigation.navigate("newcharge");
+    navigation.navigate("pixarea");
   }
   function customers() {
     navigation.navigate("customerlist");

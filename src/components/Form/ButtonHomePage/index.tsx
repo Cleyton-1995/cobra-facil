@@ -6,7 +6,7 @@ interface ButtonHomePageProps {
   title?: string;
 }
 
-export function ButtonHomePage( { onPress, title}: ButtonHomePageProps ) {
+export function  ButtonHomePage( { onPress, title}: ButtonHomePageProps ) {
   return (
     <View>
       <TouchableOpacity onPress={onPress} >

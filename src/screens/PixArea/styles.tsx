@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     marginLeft: 15,
     marginTop: 50,
-    color: COLORS.BLACK_PRIMARY,
+    color: COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,
   },
 
