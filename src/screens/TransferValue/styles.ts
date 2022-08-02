@@ -81,5 +81,11 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     right: 70,
     margin: 12,
-  }
+  },
+
+  continues: {
+    color: COLORS.BLUE_500,
+    marginTop: 20,
+    marginHorizontal: 15,
+  },
 });

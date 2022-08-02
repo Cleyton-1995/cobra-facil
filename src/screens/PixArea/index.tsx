@@ -32,7 +32,7 @@ export function PixArea() {
         </TouchableOpacity>
         <Text style={styles.title}>Área Pix</Text>
         <Text style={styles.paragraph}>
-          Transfira seu dinheir a qualquer hora do dia e da semana
+          Transfira seu dinheiro a qualquer hora do dia e da semana
         </Text>
         <Text style={styles.submit}>Enviar</Text>
         <ImageHeadersWhite />

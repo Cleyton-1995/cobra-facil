@@ -103,6 +103,7 @@ export interface CurrencyInputProps extends Omit<TextInputProps, 'value'> {
    */
   showPositiveSign?: boolean;
 
+
   /**
    * Where the negative/positive sign (+/-) should be placed. Defaults to "afterPrefix".
    * Use `showPositiveSign` if you want to show the `+` sign.
