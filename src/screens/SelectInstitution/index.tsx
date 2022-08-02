@@ -1,4 +1,5 @@
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { TouchableOpacity, View, Text } from "react-native";
 import { ImageHeaders } from "../../components/Header/ImageHeaders";
@@ -6,9 +7,14 @@ import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { styles } from "./styles";
 
 export function SelectInstitution() {
+  const navigation = useNavigation();
+  function back() {
+    navigation.navigate("transfervalue");
+  }
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity activeOpacity={0.8}>
+      <TouchableOpacity onPress={back} activeOpacity={0.8}>
         <AntDesign style={styles.icon} name="left" size={15} color="#0073FB" />
         <Text style={styles.back}>Voltar</Text>
       </TouchableOpacity>

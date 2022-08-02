@@ -13,7 +13,7 @@ export function TypeYourPix() {
   }
 
   function continues() {
-    navigation.navigate("typeyourpix");
+    navigation.navigate("selectinstitution");
   }
 
   return (
