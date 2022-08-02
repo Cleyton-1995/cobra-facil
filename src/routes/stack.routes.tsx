@@ -14,6 +14,7 @@ import { NewCustomer } from "../screens/NewCustomer";
 import { CustomerProfile } from "../screens/CustomerProfile";
 import { PixArea } from "../screens/PixArea";
 import { TransferValue } from "../screens/TransferValue";
+import { TypeYourPix } from "../screens/TypeYourPix";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -37,6 +38,7 @@ export function StackRoutes () {
       <Screen name="customerprofile" component={ CustomerProfile } />
       <Screen name="pixarea" component={ PixArea } />
       <Screen name="transfervalue" component={ TransferValue } />
+      <Screen name="typeyourpix" component={ TypeYourPix } />
     </Navigator>
   );
 }

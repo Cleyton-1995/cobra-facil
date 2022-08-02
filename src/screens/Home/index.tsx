@@ -23,7 +23,7 @@ export function Home() {
         Encontre um contato na sua lista ou inicie uma nova transferência
        </Text>
 
-       <TextInput placeholder="Nome, CPF/CPJ ou Chave Pix" style={styles.textInput} />
+       <TextInput placeholder="Nome, CPF/CNPJ ou Chave Pix" style={styles.textInput} />
        <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
           <Text style={styles.continues}>
             Continue

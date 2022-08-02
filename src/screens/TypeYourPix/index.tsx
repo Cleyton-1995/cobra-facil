@@ -5,7 +5,7 @@ import { ImageHeaders } from "../../components/Header/ImageHeaders";
 
 import { styles } from "./styles";
 
-export function Home() {
+export function TypeYourPix() {
 
   return (
     <View style={styles.container}>

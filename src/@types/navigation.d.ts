@@ -15,6 +15,7 @@ export declare global {
       customerprofile: undefined;
       pixarea: undefined;
       transfervalue: undefined;
+      typeyourpix: undefined;
     }
   }
 }
