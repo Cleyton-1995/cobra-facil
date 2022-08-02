@@ -16,6 +16,7 @@ export declare global {
       pixarea: undefined;
       transfervalue: undefined;
       typeyourpix: undefined;
+      selectinstitution: undefined;
     }
   }
 }
