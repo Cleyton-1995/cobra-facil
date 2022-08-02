@@ -18,6 +18,10 @@ export function TransferValue() {
   const navigation = useNavigation();
   function back() {
     navigation.navigate("pixarea");
+  
+  }
+  function continues() {
+    navigation.navigate("typeyourpix");
   }
   const [valor, setValor] = React.useState<number | null>(0);
 
@@ -50,7 +54,7 @@ export function TransferValue() {
         />
         </View>
 
-        <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
+        <TouchableOpacity onPress={continues} style={styles.btn} activeOpacity={0.8}>
           <Text style={styles.txt}>
             Continue
           </Text>
