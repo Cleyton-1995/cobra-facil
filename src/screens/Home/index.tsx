@@ -1,4 +1,4 @@
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Entypo } from "@expo/vector-icons";
 import React from "react";
 import { TouchableOpacity, View, Text, TextInput } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
@@ -16,16 +16,16 @@ export function Home() {
         </TouchableOpacity>
         <ImageHeaders />
 
-        <Text style={styles.title}>Insira a senha</Text>
-        <Text style={styles.title}>de 4 dígitos</Text>
-       
+        <Text style={styles.title}>Pronto, enviamos sua transferência</Text>
 
         <View style={styles.transferring}>
-          <TextInput style={styles.textInput} placeholder="Senha" secureTextEntry maxLength={4} keyboardType="numeric" />
+        <Text style={styles.value}>R$ 10,00</Text>
+        <Text style={styles.person}>para CLEYTON DE SOUZA COSTA</Text>
 
            <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
+              <Entypo style={styles.shareProof} name="text-document" size={24} color="white" />
             <Text style={styles.txtbtn}>
-              Transferir
+              Enviar comprovate
             </Text>
           </TouchableOpacity>
         </View>

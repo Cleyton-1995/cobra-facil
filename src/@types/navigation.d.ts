@@ -19,6 +19,7 @@ export declare global {
       selectinstitution: undefined;
       transferringdate: undefined;
       insertpassword: undefined;
+      sendproof: undefined;
     }
   }
 }
