@@ -17,6 +17,7 @@ export declare global {
       transfervalue: undefined;
       typeyourpix: undefined;
       selectinstitution: undefined;
+      transferringdate: undefined;
     }
   }
 }

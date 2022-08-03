@@ -12,6 +12,10 @@ export function SelectInstitution() {
     navigation.navigate("transfervalue");
   }
 
+  function selectInstitution() {
+    navigation.navigate("transferringdate");
+  }
+
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={back} activeOpacity={0.8}>
@@ -21,26 +25,43 @@ export function SelectInstitution() {
       <ImageHeaders />
 
       <Text style={styles.title}>Cleyton de Souza Costa</Text>
-      <Text style={styles.txt}>
-        Transfeindo R$ 10,00
-      </Text>
+      <Text style={styles.txt}>Transferindo R$ 10,00</Text>
 
       <TouchableOpacity activeOpacity={0.8} style={styles.bank}>
-      <MaterialCommunityIcons style={styles.iconBank} name="bank-outline" size={24} color="black" />
+        <MaterialCommunityIcons
+          style={styles.iconBank}
+          name="bank-outline"
+          size={24}
+          color="black"
+        />
         <Text style={styles.bankOne}>BCO BRADESCO S. A</Text>
         <Text style={styles.bankAccount}>Agência 0000 - Conta 0000-0</Text>
         <AntDesign style={styles.right} name="right" size={24} color="black" />
       </TouchableOpacity>
 
-      <TouchableOpacity activeOpacity={0.8} style={styles.bank}>
-      <MaterialCommunityIcons style={styles.iconBank} name="bank-outline" size={24} color="black" />
+      <TouchableOpacity
+        onPress={selectInstitution}
+        activeOpacity={0.8}
+        style={styles.bank}
+      >
+        <MaterialCommunityIcons
+          style={styles.iconBank}
+          name="bank-outline"
+          size={24}
+          color="black"
+        />
         <Text style={styles.bankOne}>NU PAGAMENTOS S. A</Text>
         <Text style={styles.bankAccount}>Agência 0000 - Conta 0000-0</Text>
         <AntDesign style={styles.right} name="right" size={24} color="black" />
       </TouchableOpacity>
 
       <TouchableOpacity activeOpacity={0.8} style={styles.bank}>
-        <MaterialCommunityIcons style={styles.iconBank} name="bank-outline" size={24} color="black" />
+        <MaterialCommunityIcons
+          style={styles.iconBank}
+          name="bank-outline"
+          size={24}
+          color="black"
+        />
         <Text style={styles.anotherInstitution}>Outra Instituição</Text>
         <AntDesign style={styles.right} name="right" size={24} color="black" />
       </TouchableOpacity>
