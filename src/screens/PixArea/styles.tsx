@@ -39,17 +39,17 @@ export const styles = StyleSheet.create({
 
   submit: {
     fontSize: 20,
-    marginLeft: 15,
+    marginLeft: 90,
     marginTop: 5,
     color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
   },
 
-  toReceive: {
+  received: {
     fontSize: 20,
-    marginLeft: 15,
-    marginTop: 50,
-    color: COLORS.BLUE_500,
+    marginLeft: 195,
+    marginTop: -30,
+    color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
   },
 
@@ -66,27 +66,7 @@ export const styles = StyleSheet.create({
     width: 100,
     height: 90,
     marginTop: -90,
-    left:  20,
-    borderRadius: 5,
-    paddingTop: 60,
-  },
-
-  copyPaste: {   
-    backgroundColor: COLORS.WHITE,
-    width: 100,
-    height: 90,
-    marginTop: -90,
-    left:  130,
-    borderRadius: 5,
-    paddingTop: 60,
-  },
-
-  qrcode: {   
-    backgroundColor: COLORS.WHITE,
-    width: 100,
-    height: 90,
-    marginTop: -90,
-    left:  240,
+    left:  70,
     borderRadius: 5,
     paddingTop: 60,
   },
@@ -95,20 +75,10 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.WHITE,
     width: 100,
     height: 90,
-    marginTop: 20,
-    left:  70,
-    borderRadius: 5,
-    paddingTop: 60,
-  },
-
-  deposit: {   
-    backgroundColor: COLORS.WHITE,
-    width: 100,
-    height: 90,
     marginTop: -90,
-    left:  180,
     borderRadius: 5,
     paddingTop: 60,
+    marginLeft: 190,
   },
 
   titlesBottom: {

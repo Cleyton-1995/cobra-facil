@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingTop: getStatusBarHeight() + 17,
     backgroundColor: COLORS.GRAY_QUINTENAY,
-    height: 615,
+    height: 300,
   },
 
   back: {
@@ -27,50 +27,52 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.BOLD,
   },
 
+  paragraph: {
+    marginLeft: 15,
+    marginTop: 40,
+    color: COLORS.WHITE,
+    marginHorizontal: 20,
+    marginBottom: 15,
+  },
+
   icon: {
     marginLeft: 15,
   },
 
-  transferring: {
-    height: 150,
-    backgroundColor: COLORS.WHITE,
-    width: 330,
-    alignSelf: "center",
-    borderRadius: 5,
+  textInput: {
     marginTop: 50,
-    paddingTop: 20,
-    paddingLeft: 15,
+    fontSize: 20,
+    borderBottomColor: COLORS.GRAY_SECONDARY,
+    borderBottomWidth: 1,
+    marginLeft: 15,
+    width: 325,
+  },
+
+  txt: {
+    color: COLORS.BLUE_500,
+    marginTop: 20,
+    marginHorizontal: 15,
+  },
+
+  iconRight: {
+    position: 'absolute',
+    right: 70,
+    margin: 12,
   },
 
   btn: {
     width: 300,
     backgroundColor: COLORS.BLUE_500,
-    justifyContent: "center",
+    alignSelf: 'center',
     borderRadius: 5,
     padding: 10,
-    marginTop: 20,
-    paddingLeft: 40,
+    marginTop: 50,
   },
 
-  txtbtn: {
+  continues: {
     color: COLORS.WHITE,
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 20,
   },
 
-  value: {
-    textAlign: "center",
-    fontSize: 22,
-  },
-
-  person: {
-    textAlign: "center",
-    fontSize: 15,
-  },
-
-  shareProof: {
-    marginLeft: 35,
-    position: "absolute",
-
-  }
 });

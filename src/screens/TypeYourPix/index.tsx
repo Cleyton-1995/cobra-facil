@@ -1,7 +1,7 @@
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { TouchableOpacity, View, Text, TextInput } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { ImageHeaders } from "../../components/Header/ImageHeaders";
 
 import { styles } from "./styles";
@@ -9,7 +9,7 @@ import { styles } from "./styles";
 export function TypeYourPix() {
   const navigation = useNavigation();
   function back() {
-    navigation.navigate("transfervalue");
+    navigation.navigate("pixarea");
   }
 
   function continues() {

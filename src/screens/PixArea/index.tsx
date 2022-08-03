@@ -21,6 +21,10 @@ export function PixArea() {
   function transfer() {
     navigation.navigate("transfervalue");
   }
+
+  function charge() {
+    navigation.navigate("newcharge");
+  }
   
   
   return (
@@ -35,6 +39,7 @@ export function PixArea() {
           Transfira seu dinheiro a qualquer hora do dia e da semana
         </Text>
         <Text style={styles.submit}>Enviar</Text>
+        <Text style={styles.received}>Receber</Text>
         <ImageHeadersWhite />
       </View>
 
@@ -45,40 +50,14 @@ export function PixArea() {
           </Text>
           <MaterialCommunityIcons style={styles.copy} name="cash-minus" size={35} color="#0073FB" />
         </TouchableOpacity>
-
-        <TouchableOpacity activeOpacity={0.98} style={styles.copyPaste}>
-          <ButtonHomePage />
-          <Text style={styles.titlesBottom}>
-            Pix Copia e Cola
-          </Text>
-          <Octicons style={styles.copy} name="copy" size={30} color="#0073FB" />
-        </TouchableOpacity>
-
-        <TouchableOpacity activeOpacity={0.98} style={styles.qrcode}>
-          <ButtonHomePage  />
-          <Text style={styles.titlesBottom} >
-            Ler Qr code
-          </Text>
-          <Ionicons style={styles.copy} name="md-qr-code-sharp" size={30} color="#0073FB" />
-        </TouchableOpacity>
     
-        <Text style={styles.toReceive}>Receber</Text>
-
-        <TouchableOpacity activeOpacity={0.98} style={styles.demand}>
+        <TouchableOpacity onPress={charge} activeOpacity={0.98} style={styles.demand}>
           <ButtonHomePage />
           <Text style={styles.titlesBottom}>
             Cobrar
           </Text>
           <Fontisto style={styles.dollar} name="dollar" size={17} color="#0073FB" />
           <MaterialIcons style={styles.copy} name="chat-bubble-outline" size={35} color="#0073FB" />
-        </TouchableOpacity>
-
-        <TouchableOpacity activeOpacity={0.98} style={styles.deposit}>
-          <ButtonHomePage  />
-          <Text style={styles.titlesBottom} >
-            Depositar
-          </Text>
-          <MaterialCommunityIcons style={styles.copy} name="cash-plus" size={35} color="#0073FB" />
         </TouchableOpacity>
       </View>
     </ScrollView>
