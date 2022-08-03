@@ -18,6 +18,7 @@ export declare global {
       typeyourpix: undefined;
       selectinstitution: undefined;
       transferringdate: undefined;
+      insertpassword: undefined;
     }
   }
 }

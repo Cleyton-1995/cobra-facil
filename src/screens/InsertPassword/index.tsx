@@ -1,4 +1,5 @@
 import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { TouchableOpacity, View, Text, TextInput } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
@@ -6,11 +7,16 @@ import { ImageHeaders } from "../../components/Header/ImageHeaders";
 
 import { styles } from "./styles";
 
-export function Home() {
+export function InsertPassword() {
+  const navigation = useNavigation();
+  function back() {
+    navigation.navigate("selectinstitution");
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
-        <TouchableOpacity activeOpacity={0.8}>
+        <TouchableOpacity onPress={back} activeOpacity={0.8}>
           <AntDesign style={styles.icon}  name="left" size={15} color="#0073FB" />
           <Text style={styles.back}>Voltar</Text>
         </TouchableOpacity>

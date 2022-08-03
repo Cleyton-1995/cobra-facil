@@ -12,6 +12,10 @@ export function TransferringDate() {
   function back() {
     navigation.navigate("selectinstitution");
   }
+  
+  function transfer() {
+    navigation.navigate("insertpassword");
+  }
 
   return (
     <ScrollView>
@@ -62,7 +66,7 @@ export function TransferringDate() {
           </Text>
            <Text style={styles.account}>0000000-0</Text>
 
-           <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
+           <TouchableOpacity onPress={transfer} style={styles.btn} activeOpacity={0.8}>
             <Text style={styles.txtbtn}>
               Transferir
             </Text>

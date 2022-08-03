@@ -17,6 +17,7 @@ import { TransferValue } from "../screens/TransferValue";
 import { TypeYourPix } from "../screens/TypeYourPix";
 import { SelectInstitution } from "../screens/SelectInstitution";
 import { TransferringDate } from "../screens/TransferringDate";
+import { InsertPassword } from "../screens/InsertPassword";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -43,6 +44,7 @@ export function StackRoutes () {
       <Screen name="typeyourpix" component={ TypeYourPix } />
       <Screen name="selectinstitution" component={ SelectInstitution } />
       <Screen name="transferringdate" component={ TransferringDate } />
+      <Screen name="insertpassword" component={ InsertPassword } />
     </Navigator>
   );
 }
