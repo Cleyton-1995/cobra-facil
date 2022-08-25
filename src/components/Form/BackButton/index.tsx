@@ -1,23 +1,28 @@
-import React from 'react';
-import { AntDesign } from '@expo/vector-icons';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { AntDesign } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
-import { styles } from './styles';
+import { styles } from "./styles";
 
 interface BackButtonProps {
   title: string;
   onPress?: () => void;
-  };
+  color?: string;
+}
 
-export function BackButton({ title, onPress}: BackButtonProps) {
+export function BackButton({ title, onPress, color = '#0073FB' }: BackButtonProps) {
   return (
     <View style={styles.container}>
-    <TouchableOpacity activeOpacity={0.8}>
-      <AntDesign color="#0073FB" name="left" size={15}  />
-    <Text  onPress={onPress} style={styles.back} >
-        {title} 
-      </Text>
-    </TouchableOpacity>
+      <TouchableOpacity activeOpacity={0.8}>
+        <AntDesign name="left" size={15} color={color} />
+        <Text onPress={onPress} style={[styles.back, {color: color}]}>
+          {title}
+        </Text>
+        <Text onPress={onPress} style={styles.subtitle}>
+          Que bom ter você aqui.
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useState } from "react";
+import React from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Input } from "../../components/Form/Input";
 import { Header } from "../../components/Header/HeaderWelcome";

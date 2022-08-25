@@ -7,12 +7,12 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { BackButton } from "../../components/Form/BackButton";
 import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { BackButton } from "../../components/Form/BackButton";
 
 export function CustomerList() {
   const navigation = useNavigation();
@@ -26,6 +26,14 @@ export function CustomerList() {
     navigation.navigate("customerprofile");
   }
 
+  const DATA = [
+    {name: 'Felipe André Roberto' },
+    {name: 'Jonarhan Luiz' },
+    {name: 'Henrique Cardoso' },
+    {name: 'Paulo Fernando' },
+    {name: 'José Roberto' },
+  ]
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -36,36 +44,14 @@ export function CustomerList() {
         <ImageHeaders />
         <TextInput placeholder="Pesquisar     🔍" style={styles.search} />
 
-        <TouchableOpacity onPress={openCustomerProfile} activeOpacity={0.8} style={styles.input}>
-          <Text onPress={openCustomerProfile} style={styles.title}>Felipe André Roberto</Text>
-          <Text onPress={openCustomerProfile} style={styles.textInput}>Mostrar informações pessoais </Text>
-          <AntDesign style={styles.icon} name="down" size={18} color="black" />
-          <Text style={styles.circleBlue} />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
-          <Text style={styles.title}>Jonathan Luiz</Text>
-          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
-          <AntDesign style={styles.icon} name="down" size={18} color="black" />
-          <Text style={styles.circleBlue} />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
-          <Text style={styles.title}>Henrique Cardoso</Text>
-          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
-          <AntDesign style={styles.icon} name="down" size={18} color="black" />
-          <Text style={styles.circleRed} />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
-          <Text style={styles.title}>Paulo Fernando</Text>
-          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
-          <AntDesign style={styles.icon} name="down" size={18} color="black" />
-          <Text style={styles.circleBlue} />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.8} style={styles.input}>
-          <Text style={styles.title}>José Roberto</Text>
-          <Text style={styles.textInput}>Mostrar informações pessoais </Text>
-          <AntDesign style={styles.icon} name="down" size={18} color="black" />
-          <Text style={styles.circleRed } />
-        </TouchableOpacity>
+        {DATA.map((customer)=>(
+            <TouchableOpacity onPress={openCustomerProfile} activeOpacity={0.8} style={styles.input}>
+            <Text onPress={openCustomerProfile} style={styles.title}>{customer.name}</Text>
+            <Text onPress={openCustomerProfile} style={styles.textInput}>Mostrar informações pessoais </Text>
+            <AntDesign style={styles.icon} name="down" size={18} color="black" />
+            <Text style={styles.circleBlue} />
+          </TouchableOpacity>
+        ))}
 
         <TouchableOpacity onPress={ addNewCustomer} activeOpacity={0.8}>
           <Text onPress={ addNewCustomer} style={styles.btn}>Adicionar um novo cliente</Text>

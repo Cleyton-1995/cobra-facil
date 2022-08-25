@@ -11,6 +11,7 @@ import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { useNavigation } from "@react-navigation/native";
+import { BackButton } from "../../components/Form/BackButton";
 
 export function CustomerProfile() {
   const navigation = useNavigation();
@@ -23,7 +24,7 @@ export function CustomerProfile() {
       <View style={styles.container}>
         <TouchableOpacity activeOpacity={0.8}>
           <AntDesign style={styles.icon} name="left" size={15} color="white" />
-          <Text onPress={back} style={styles.back}>Voltar</Text>
+          <BackButton onPress={back} title="Voltar" color="#ffffff" />
         </TouchableOpacity>
         <Text style={styles.title}>
           Perfil do Cliente

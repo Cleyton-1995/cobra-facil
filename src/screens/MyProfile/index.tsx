@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { ScrollView, View, } from "react-native";
-import { BackButtonWhite } from "../../components/Form/BackButtonWhite";
+import { ScrollView, View } from "react-native";
+import { BackButton } from "../../components/Form/BackButton";
 import { BankData } from "../../components/Header/BankData";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { Profile } from "../../components/Header/Profile";
@@ -22,7 +22,7 @@ export function MyProfile() {
     <ScrollView>
       <View style={styles.container}>
         <Profile title="Perfil de  Pedro" />
-        <BackButtonWhite onPress={backMyProfile} title="Voltar" />
+        <BackButton onPress={backMyProfile} title="Voltar" color="#ffffff" />
         <ImageHeadersWhite />
       </View>
       <View style={styles.content}>

@@ -8,13 +8,20 @@ export const styles = StyleSheet.create({
     width: "90%",
     flexDirection: 'row',
     left: 0,
-    margin: -10,
+    marginTop: 15,
+    marginLeft: 15,
   },
-  
   back: {
-    color: COLORS.BLUE_500,
+    color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
     top: -18,
     marginLeft: 20,
+  },
+
+  subtitle: {
+    fontSize: 12,
+    marginLeft: 4,
+    marginTop: 55,
+    color: COLORS.WHITE,
   }
 });
