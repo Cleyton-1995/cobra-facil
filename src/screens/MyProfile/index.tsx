@@ -22,11 +22,13 @@ export function MyProfile() {
     <ScrollView>
       <View style={styles.container}>
         <Profile title="Perfil de  Pedro" />
-        <BackButton onPress={backMyProfile} title="Voltar" color="#ffffff" />
+        <View style={styles.back}>
+          <BackButton onPress={backMyProfile} title="Voltar" color="#ffffff" />
+        </View>
         <ImageHeadersWhite />
       </View>
       <View style={styles.content}>
-      <BankData onPress={exitTheApp} />   
+        <BankData onPress={exitTheApp} />
       </View>
     </ScrollView>
   );

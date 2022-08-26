@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   back: {
     color: COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,
-    top: -18,
+    top: -30,
     marginLeft: 35,
   },
 
@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
 
   icon: {
     marginLeft: 15,
+    top: -12,
   },
 
   transferring: {

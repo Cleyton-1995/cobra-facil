@@ -9,8 +9,8 @@ export const styles = StyleSheet.create({
   },
 
   back: {
-    top: 30,
-    left: 30,
+    top: 40,
+    left: 15,
   },
 
   input: {

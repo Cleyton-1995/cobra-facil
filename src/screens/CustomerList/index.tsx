@@ -37,9 +37,9 @@ export function CustomerList() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <View style={styles.back}>
+        <TouchableOpacity style={styles.back} activeOpacity= {0.8}>
           <BackButton onPress={backScreenHome} title="Voltar" />
-        </View>
+        </TouchableOpacity>
         <MostHeaders title="Seus Clientes" />
         <ImageHeaders />
         <TextInput placeholder="Pesquisar     🔍" style={styles.search} />

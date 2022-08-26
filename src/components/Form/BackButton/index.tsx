@@ -19,9 +19,6 @@ export function BackButton({ title, onPress, color = '#0073FB' }: BackButtonProp
         <Text onPress={onPress} style={[styles.back, {color: color}]}>
           {title}
         </Text>
-        <Text onPress={onPress} style={styles.subtitle}>
-          Que bom ter você aqui.
-        </Text>
       </TouchableOpacity>
     </View>
   );

@@ -22,8 +22,7 @@ export function CustomerProfile() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <TouchableOpacity activeOpacity={0.8}>
-          <AntDesign style={styles.icon} name="left" size={15} color="white" />
+        <TouchableOpacity style={styles.back} activeOpacity={0.8}>
           <BackButton onPress={back} title="Voltar" color="#ffffff" />
         </TouchableOpacity>
         <Text style={styles.title}>

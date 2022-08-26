@@ -19,18 +19,14 @@ export const styles = StyleSheet.create({
   },
 
   back: {
-    color: COLORS.WHITE,
-    fontFamily: FONTS.BOLD,
-    top: -18,
-    marginLeft: 35,
-  },
-
-  icon: {
-    marginLeft: 15,
+    paddingLeft: 15,
+    height: 10,
+    top: -5,
+    marginBottom: 25,
   },
 
   title: {
-    fontSize: 22,
+    fontSize: 22, 
     marginLeft: 15,
     marginTop: 5,
     color: COLORS.WHITE,

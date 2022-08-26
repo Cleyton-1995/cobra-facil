@@ -21,12 +21,13 @@ export const styles = StyleSheet.create({
   back: {
     color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
-    top: -18,
+    top: -30,
     marginLeft: 35,
   },
 
   icon: {
     marginLeft: 15,
+    top: -12,
   },
 
   title: {

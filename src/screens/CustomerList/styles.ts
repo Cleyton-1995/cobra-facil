@@ -13,7 +13,9 @@ export const styles = StyleSheet.create({
 
 
   back: {
-    paddingLeft: 30,
+    paddingLeft: 15,
+    height: 10,
+    top: -5,
   },
 
   search: {
