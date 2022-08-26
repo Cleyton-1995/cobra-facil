@@ -37,7 +37,7 @@ export function TypeYourPix() {
           <Text style={styles.continues}>
             Continue
           </Text>
-          <AntDesign style={styles.iconRight} name="right" size={25} color="white" />
+          <AntDesign style={styles.iconRight} name="right" size={18} color="white" />
         </TouchableOpacity>
     </View>
   );

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     top: -180,
     backgroundColor: COLORS.WHITE,
     width: 325,
-    height: 300,
+    height: 320,
     borderRadius: 5,
     paddingLeft: 3,
   },
@@ -41,12 +41,12 @@ export const styles = StyleSheet.create({
 
   textInput: {
     color: COLORS.BLUE_500,
-    marginLeft: 10,
+    marginLeft: 12,
   },
 
   input: {
     width: 300,
-    height: 45,
+    padding: 10,
     marginLeft: 10,
     paddingLeft: 10,
     borderColor: COLORS.GRAY_PRIMARY,
@@ -57,7 +57,8 @@ export const styles = StyleSheet.create({
   touchableOpacity: {
     marginTop: 20,
     width: 300,
-    height: 45,
+    // height: 45,
+    padding: 10,
     borderRadius: 5,
     textAlign: 'center',
     alignSelf: 'center',
@@ -66,6 +67,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.BLUE_500,
     color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
+    fontSize: 16,
   },
 
   help: {

@@ -59,6 +59,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     right: 70,
     margin: 12,
+    top: 5
   },
 
   btn: {
@@ -73,7 +74,8 @@ export const styles = StyleSheet.create({
   continues: {
     color: COLORS.WHITE,
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 16,
+    padding: 3,
   },
 
 });

@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
   },
 
   search: {
-    height: 40,
+    padding: 10,
     width: 330,
     marginTop: 100,
     alignSelf: "center",

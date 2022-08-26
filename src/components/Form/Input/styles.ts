@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
   email: {
     color: COLORS.BLUE_500,
     bottom: 30,
-    fontSize:16,
+    fontSize:12,
   },
 
   password: {
@@ -38,6 +38,6 @@ export const styles = StyleSheet.create({
   icon: {
     right: 30,
     position: "absolute",
-    top: 19,
+    top: 15,
   },
 });

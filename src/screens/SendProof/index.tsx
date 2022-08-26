@@ -29,7 +29,7 @@ export function SendProof() {
         <Text style={styles.person}>para CLEYTON DE SOUZA COSTA</Text>
 
            <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
-              <Entypo style={styles.shareProof} name="text-document" size={24} color="white" />
+              <Entypo style={styles.shareProof} name="text-document" size={22} color="white" />
             <Text style={styles.txtbtn}>
               Enviar comprovante
             </Text>

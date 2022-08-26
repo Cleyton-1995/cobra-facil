@@ -74,7 +74,7 @@ export const styles = StyleSheet.create({
   forgotPassword: {
     color: COLORS.BLUE_500,
     fontFamily: FONTS.BOLD,
-    fontSize: 14,
+    fontSize: 12,
     position: 'relative',
     bottom: 45,
     marginLeft: 140,

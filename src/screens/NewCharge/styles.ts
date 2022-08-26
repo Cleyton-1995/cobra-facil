@@ -35,7 +35,8 @@ export const styles = StyleSheet.create({
     borderColor: COLORS.GRAY_SECONDARY,
     borderWidth: 1,
     borderRadius: 5,
-    height: 40,
+    // height: 40,
+    padding: 10,
     width: 300,
     alignSelf: 'center',
     marginBottom: 20,
@@ -72,7 +73,7 @@ export const styles = StyleSheet.create({
   },
 
   charge: {
-    top: 50,
+    top: 60,
     fontFamily: FONTS.BOLD,
     color: COLORS.BLUE_500,
     marginBottom: 10,
@@ -81,7 +82,7 @@ export const styles = StyleSheet.create({
   },
 
   repeatCharge: {
-    top: 50,
+    top: 60,
     borderColor: COLORS.GRAY_SECONDARY,
     borderWidth: 1,
     borderRadius: 5,
@@ -100,7 +101,6 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 15,
     paddingTop: 10,
-
   },
 
   values: {
@@ -108,7 +108,8 @@ export const styles = StyleSheet.create({
     borderColor: COLORS.GRAY_SECONDARY,
     borderWidth: 1,
     borderRadius: 5,
-    height: 40,
+    // height: 40,
+    padding: 10,
     width: 160,
     alignSelf: 'center',
     marginBottom: 20,
@@ -117,7 +118,7 @@ export const styles = StyleSheet.create({
   },
 
   repetition: {
-    top: -50,
+    top: -60,
     fontFamily: FONTS.BOLD,
     color: COLORS.BLUE_500,
     marginBottom: 10,
@@ -127,11 +128,12 @@ export const styles = StyleSheet.create({
   },
 
   repetitions: {
-    top: -50,
+    top: -60,
     borderColor: COLORS.GRAY_SECONDARY,
     borderWidth: 1,
     borderRadius: 5,
-    height: 40,
+    // height: 40,
+    padding: 10,
     width: 130,
     alignSelf: 'center',
     marginBottom: 20,
@@ -155,6 +157,7 @@ export const styles = StyleSheet.create({
     color: COLORS.BLUE_500,
     marginBottom: 5,
     marginLeft: 15,
+    padding: 10,
   },
   
   selectBilling: {
@@ -173,6 +176,7 @@ export const styles = StyleSheet.create({
     color: COLORS.BLUE_500,
     marginBottom: 5,
     marginLeft: 15,
+    paddingTop: 10,
   },
 
   information: {
@@ -216,7 +220,7 @@ export const styles = StyleSheet.create({
 
   iconSelect: {
     position: 'absolute',
-    bottom: 110,
+    bottom: 115,
     left: 280,
   },
 

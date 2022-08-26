@@ -56,7 +56,8 @@ export const styles = StyleSheet.create({
   txtbtn: {
     color: COLORS.WHITE,
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 16,
+    padding: 3,
   },
 
   value: {
@@ -70,7 +71,7 @@ export const styles = StyleSheet.create({
   },
 
   shareProof: {
-    marginLeft: 35,
+    marginLeft: 45,
     position: "absolute",
 
   }

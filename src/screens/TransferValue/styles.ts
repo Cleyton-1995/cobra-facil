@@ -75,13 +75,15 @@ export const styles = StyleSheet.create({
   txt: {
     color: COLORS.WHITE,
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 16,
+    padding: 3
   },
 
   iconRight: {
     position: 'absolute',
     right: 70,
     margin: 12,
+    top: 5,
   },
 
   continues: {

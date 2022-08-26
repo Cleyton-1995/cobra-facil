@@ -126,7 +126,8 @@ export const styles = StyleSheet.create({
   txtbtn: {
     color: COLORS.WHITE,
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 16,
+    padding: 3,
   },
 
   iconDown: {

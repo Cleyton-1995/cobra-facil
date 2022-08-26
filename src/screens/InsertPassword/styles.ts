@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
   },
 
   transferring: {
-    height: 150,
+    height: 170,
     backgroundColor: COLORS.WHITE,
     width: 330,
     alignSelf: "center",
@@ -41,6 +41,7 @@ export const styles = StyleSheet.create({
     marginTop: 50,
     paddingTop: 20,
     paddingLeft: 15,
+  
   },
 
   btn: {
@@ -55,16 +56,16 @@ export const styles = StyleSheet.create({
   txtbtn: {
     color: COLORS.WHITE,
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 16,
+    padding: 3
   },
 
   textInput: {
     borderColor: COLORS.GRAY_PRIMARY,
     borderWidth:1,
-    height: 50,
+    padding: 10,
     width:300,
     borderRadius: 5,
     paddingLeft: 10,
-    fontSize: 15,
   }
 });

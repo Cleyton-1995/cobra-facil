@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
+    height: 700,
     alignItems: 'center',
     paddingTop: getStatusBarHeight() + 17,
     backgroundColor: COLORS.GRAY_QUINTENAY,
@@ -14,8 +15,9 @@ export const styles = StyleSheet.create({
   text: {
       width: '90%',
       top: -50,
-      fontSize: 11,
+      fontSize: 12,
       textAlign: 'justify',
+      paddingRight: 5,
   },
   
   access: {
@@ -28,16 +30,17 @@ export const styles = StyleSheet.create({
 
   accessColor: {
     color: COLORS.WHITE,
-    fontSize: 14,
+    fontSize: 16,
     fontFamily: FONTS.BOLD,
   },
 
   mainContainer: {
-    top: 150,
+    top: -200,
     backgroundColor:  COLORS.WHITE,
     width: '90%',
+    height: 320,
     alignItems: 'center',
-    paddingBottom: 200,
+    paddingBottom: 100,
     paddingTop: 80,
     borderRadius: 5,
   },
