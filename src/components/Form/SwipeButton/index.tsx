@@ -14,8 +14,9 @@ export function SwipeButton() {
       <TouchableOpacity style={[styles.outter, isOn ? { justifyContent: "flex-end", backgroundColor: "#80AEDD" }:
         { justifyContent: "flex-start", backgroundColor: "#0073FB"}
     ]} activeOpacity={1} onPress={toggleSwitch} >
-        <View style={[styles.inner, isOn ? { backgroundColor: "#0073FB" } : { backgroundColor: "#80AEDD" }]} />
+        <View style={[styles.inner, isOn ? { backgroundColor: "#0073FB" } : { backgroundColor: "#80AEDD" }]} /> 
       </TouchableOpacity>
+            <Text style={styles.text}>  { isOn ? 'Repetir': '' } </Text>
     </View>
   );
 }
@@ -34,7 +35,7 @@ export const styles = StyleSheet.create({
   },
 
   outter: {
-    width: 40,
+    width: 50,
     height: 25,
     backgroundColor: COLORS.BLUE_300,
     borderRadius: 50,
@@ -49,5 +50,13 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-  },
+    flexDirection: "row",
+},
+
+text: {
+    color: COLORS.GRAY_PRIMARY,
+    left: 50,
+    position: "absolute",
+}
+
 });

@@ -14,6 +14,7 @@ import { styles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { BackButton } from "../../components/Form/BackButton";
+import { SwipeButton } from "../../components/Form/SwipeButton";
 
 export function NewCharge() {
   const navigation = useNavigation();
@@ -46,7 +47,10 @@ export function NewCharge() {
 
         <View style={styles.secondInput}>
           <Text style={styles.charge}>Repetir cobrança</Text>
-          <TextInput style={styles.repeatCharge} placeholder="Todos os meses" />
+          <Text style={styles.repeatCharge} >Todos os meses</Text>
+          <View style={styles.swipe}>
+          <SwipeButton/>
+          </View>
           <TouchableOpacity activeOpacity={0.8} style={styles.iconRepeat}>
           <AntDesign name="down" size={18} color="black" />
           </TouchableOpacity>

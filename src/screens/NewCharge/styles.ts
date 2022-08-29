@@ -84,6 +84,7 @@ export const styles = StyleSheet.create({
   repeatCharge: {
     top: 60,
     borderColor: COLORS.GRAY_SECONDARY,
+    color: COLORS.GRAY_PRIMARY,
     borderWidth: 1,
     borderRadius: 5,
     height: 40,
@@ -92,6 +93,7 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     paddingLeft: 10,
     marginLeft: 120,
+    padding: 8,
   },
 
   value: {
@@ -228,5 +230,11 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 130,
     left: 280,
+  },
+
+  swipe: {
+    marginLeft: 15,
+    bottom: 130,
+    position: 'absolute',
   }
 });
