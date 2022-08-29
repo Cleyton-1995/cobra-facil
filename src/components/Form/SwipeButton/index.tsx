@@ -1,77 +1,53 @@
-// import React from 'react';''
-// import { View, Text, TouchableOpacity } from 'react-native';
-// import { PanGestureHandler } from "react-native-gesture-handler"
-// import  Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue } from "react-native-reanimated";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
-// const BUTTON_WIDTH = 55;
-// const BUTTON_HEIGHT = 30;
-// const BUTTON_PADDING = 1;
-// const SWIPEABLE_DIMENSIONS = BUTTON_HEIGHT  - 2 * BUTTON_PADDING;
-// const H_WAVE_RANGE = SWIPEABLE_DIMENSIONS  + 2 * BUTTON_PADDING;
-// const H_SWIPE_RANGE = BUTTON_WIDTH  - 2 * BUTTON_PADDING - SWIPEABLE_DIMENSIONS;
+// import { styles } from './styles';
 
-// const SwipeButton = ({ onToggle }) => {
-//   const X = useSharedValue(0);
-//   const animateGestureHandler = useAnimatedGestureHandler({
-//     onActive: (e) => {
-//       X.value = e.translationX;
-//     },
+export function SwipeButton() {
+    const [ isOn, setIsOn ] = useState(true);
+    function toggleSwitch() {
+        setIsOn(isOn => !isOn);
+    }
 
-//     onEnd: () => {
-//       if (X.value < BUTTON_WIDTH/2 - SWIPEABLE_DIMENSIONS/2) {
-//         X.value = 0;
-//       } else {
-//         X.value = H_SWIPE_RANGE;
-//       }
-//     }
-//   });
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity style={[styles.outter, isOn ? { justifyContent: "flex-end", backgroundColor: "#80AEDD" }:
+        { justifyContent: "flex-start", backgroundColor: "#0073FB"}
+    ]} activeOpacity={1} onPress={toggleSwitch} >
+        <View style={[styles.inner, isOn ? { backgroundColor: "#0073FB" } : { backgroundColor: "#80AEDD" }]} />
+      </TouchableOpacity>
+    </View>
+  );
+}
 
-//   const AnimatedStyles = {
-//     swipeable: useAnimatedStyle(() => {
-//       return {
-//         transform: [{ translateX: X.value }],
-//       };
-//     }),
-//   };
+import { StyleSheet } from "react-native";
+import { COLORS } from "../../../themes/colors";
 
-//   return (
-//     <View style={styles.container}>
-//         <PanGestureHandler  onGestureEvent={animateGestureHandler} >
-//           <Animated.View style={[styles.swipeable, AnimatedStyles.swipeable]} ></Animated.View>
-//         </PanGestureHandler>      
-//     </View>
-//   );
-// }
+export const styles = StyleSheet.create({
+  inner: {
+    width:25,
+    height: 25,
+    backgroundColor: COLORS.WHITE,
+    borderRadius: 50, 
+    borderWidth: 1,
+    borderColor: COLORS.WHITE,
+  },
 
-// import { StyleSheet } from 'react-native';
-// import { COLORS } from '../../../themes/colors';
+  outter: {
+    width: 40,
+    height: 25,
+    backgroundColor: COLORS.BLUE_300,
+    borderRadius: 50,
+    alignItems: "center",
+    flexDirection: "row",
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.15,
+    shadowRadius: 2,
+  },
 
-// const styles = StyleSheet.create({
-//   container: {
-//     height: BUTTON_HEIGHT,
-//     width: BUTTON_WIDTH,
-//     padding: BUTTON_PADDING,
-//     backgroundColor: COLORS.BLUE_300,
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignSelf: 'center',
-//     marginTop: 10,
-//     marginBottom: 10,
-//     borderRadius: BUTTON_HEIGHT,
-//     borderColor: COLORS.GRAY_SECONDARY,
-//     borderWidth: 2,
-//   },
-
-//   swipeable: {
-//     height: SWIPEABLE_DIMENSIONS,
-//     width: SWIPEABLE_DIMENSIONS,
-//     borderRadius: SWIPEABLE_DIMENSIONS,
-//     borderColor: COLORS.WHITE,
-//     borderWidth: 2,
-//     backgroundColor: COLORS.BLUE_500,
-//     position: 'absolute',
-//     leftt: BUTTON_PADDING,
-//   }
-// });
-
-// export default SwipeButton;
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
