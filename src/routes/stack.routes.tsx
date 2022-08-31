@@ -19,6 +19,9 @@ import { SelectInstitution } from "../screens/SelectInstitution";
 import { TransferringDate } from "../screens/TransferringDate";
 import { InsertPassword } from "../screens/InsertPassword";
 import { SendProof } from "../screens/SendProof";
+import HomeScreen from "../screens/HomeScreens";
+import OnboardingScreen from "../screens/OnboardScreens";
+import Home from "../screens/Home";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -47,6 +50,8 @@ export function StackRoutes () {
       <Screen name="transferringdate" component={ TransferringDate } />
       <Screen name="insertpassword" component={ InsertPassword } />
       <Screen name="sendproof" component={ SendProof } />
+      <Screen name="homescreen" component={ HomeScreen } />
+      <Screen name="onboardingscreen" component={ OnboardingScreen } />
     </Navigator>
   );
 }

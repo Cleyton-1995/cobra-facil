@@ -20,6 +20,8 @@ export declare global {
       transferringdate: undefined;
       insertpassword: undefined;
       sendproof: undefined;
+      homescreen: undefined;
+      onboardingscreen: undefined;
     }
   }
 }
