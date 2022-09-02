@@ -21,7 +21,6 @@ export declare global {
       insertpassword: undefined;
       sendproof: undefined;
       homescreen: undefined;
-      onboardingscreen: undefined;
     }
   }
 }

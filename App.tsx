@@ -8,7 +8,6 @@ import {
 import AppLoading from "expo-app-loading";
 import { Routes } from './src/routes';
 import { StatusBar } from 'react-native';
-import { Home } from './src/screens/Home';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -23,7 +22,7 @@ export default function App() {
   return (
     <>
         <StatusBar barStyle={'light-content'} backgroundColor="light"/>
-        <Home />
+        <Routes />
     </>
   );
 }

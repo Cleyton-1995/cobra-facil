@@ -1,19 +1,24 @@
 import React from 'react';
-import { FlatList, ScrollView, Text, View } from 'react-native';
+import {  ScrollView, } from 'react-native';
 
 import { Onboarding } from '../../components/Form/Onboarding';
 
 
-export function Home() {
+export function HomeScreens() {
+  const navigation = useNavigation();
+  function homePage() {
+    navigation.navigate("login");
+  }
   return (
     <ScrollView style={styles.container}>
-      <Onboarding/>
+      <Onboarding onPress={homePage}/>
     </ScrollView>
   );
 }
 
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../themes/colors';
+import { useNavigation } from '@react-navigation/native';
 
 export const styles = StyleSheet.create({
   container: {
