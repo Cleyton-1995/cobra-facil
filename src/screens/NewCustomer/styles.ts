@@ -37,7 +37,8 @@ export const styles = StyleSheet.create({
   },
 
   customerNameInput: {
-    height: 40,
+    // height: 40,
+    padding: 10,
     width: 300,
     marginBottom: 20,
     paddingLeft: 10,
@@ -55,7 +56,8 @@ export const styles = StyleSheet.create({
   },
 
   contactInput: {
-    height: 40,
+    // height: 40,
+    padding: 10,
     width: 300,
     marginBottom: 20,
     paddingLeft: 10,
