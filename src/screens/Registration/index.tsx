@@ -9,6 +9,7 @@ import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
 
 export function Registrarion() {
+  
   const navigation = useNavigation();
   function backScreenLogin() {
     navigation.navigate('login')

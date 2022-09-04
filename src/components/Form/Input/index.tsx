@@ -11,11 +11,13 @@ interface InputProps {
   color?: string;
   secureTextEntry?: boolean;
   value?: string;
-  onChageText?: Function; 
+  onChageText?: Function;
 }
 
 export function Input({ label, placeholder, secureTextEntry}: InputProps) {
   const [sec, setSec] = useState(secureTextEntry);
+
+  const [ empty, setEmpty] = useState("");
 
   return (
     <View style={styles.container}>

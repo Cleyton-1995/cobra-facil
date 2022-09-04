@@ -8,6 +8,7 @@ import {
 import AppLoading from "expo-app-loading";
 import { Routes } from './src/routes';
 import { StatusBar } from 'react-native';
+import Home from './src/screens/Home';
 
 export default function App() {
     const [fontsLoaded] = useFonts({
