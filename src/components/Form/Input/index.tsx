@@ -16,9 +16,6 @@ interface InputProps {
 
 export function Input({ label, placeholder, secureTextEntry}: InputProps) {
   const [sec, setSec] = useState(secureTextEntry);
-
-  const [ empty, setEmpty] = useState("");
-
   return (
     <View style={styles.container}>
       <Text style={styles.email}>{label}</Text>
@@ -31,7 +28,7 @@ export function Input({ label, placeholder, secureTextEntry}: InputProps) {
         <TouchableOpacity onPress={() => setSec(!sec)} style={styles.icon}>
           <Ionicons name={ sec ? "eye" : "eye-off"} color="#8D8D99" size={20} />
         </TouchableOpacity>
-      )}
+      )}  
     </View>
   );
 }

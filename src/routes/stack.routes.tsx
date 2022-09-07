@@ -30,9 +30,6 @@ export function StackRoutes () {
       headerShown: false,
     }}>
       <Screen name="homescreens" component={ HomeScreens } />
-      {/* <Screen name="welcome" component={Welcome} />
-      <Screen name="welcomeOne" component={WelcomeOne} />
-      <Screen name="welcomeTwo" component={WelcomeTwo} /> */}
       <Screen name="login" component={Login} />
       <Screen name="recoverPassword" component={RecoverPassword} />
       <Screen name="registration" component={Registrarion} />

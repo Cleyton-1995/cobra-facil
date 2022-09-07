@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { BackButton } from "../../components/Form/BackButton";
 import { Input } from "../../components/Form/Input";
@@ -12,7 +12,7 @@ export function Registrarion() {
   
   const navigation = useNavigation();
   function backScreenLogin() {
-    navigation.navigate('login')
+      navigation.navigate('login')
   }
 
   return (

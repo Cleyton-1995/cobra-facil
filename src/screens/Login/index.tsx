@@ -8,6 +8,8 @@ import { styles } from "./styles";
 
 export function Login() {
 
+  const [ email, setEmail ] = useState("");
+
   const navigation = useNavigation();
   function openRecoverPassword() {
     navigation.navigate("recoverPassword");
@@ -20,7 +22,7 @@ export function Login() {
   function login() {
     navigation.navigate("homepage")
   }
-  
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -31,6 +33,8 @@ export function Login() {
             <Input
               label="E-mail"
               placeholder="Seu e-mail"
+              value={email}
+              onChageText={setEmail}
             />
             <Input
               label="Senha"
