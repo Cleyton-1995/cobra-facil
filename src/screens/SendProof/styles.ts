@@ -68,6 +68,7 @@ export const styles = StyleSheet.create({
   person: {
     textAlign: "center",
     fontSize: 15,
+    textTransform: "uppercase",
   },
 
   shareProof: {

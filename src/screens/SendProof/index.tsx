@@ -26,7 +26,7 @@ export function SendProof() {
 
         <View style={styles.transferring}>
         <Text style={styles.value}>R$ 10,00</Text>
-        <Text style={styles.person}>para CLEYTON DE SOUZA COSTA</Text>
+        <Text style={styles.person}>para Felipe André Roberto</Text>
 
            <TouchableOpacity style={styles.btn} activeOpacity={0.8}>
               <Entypo style={styles.shareProof} name="text-document" size={22} color="white" />

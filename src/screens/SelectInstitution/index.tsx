@@ -24,7 +24,7 @@ export function SelectInstitution() {
       </TouchableOpacity>
       <ImageHeaders />
 
-      <Text style={styles.title}>Cleyton de Souza Costa</Text>
+      <Text style={styles.title}>Felipe André Roberto</Text>
       <Text style={styles.txt}>Transferindo R$ 10,00</Text>
 
       <TouchableOpacity activeOpacity={0.8} style={styles.bank}>

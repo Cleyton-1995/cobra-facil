@@ -30,7 +30,7 @@ export function TransferringDate() {
         <Text style={styles.txt}>R$ 10,00</Text>
         <Text style={styles.for}>
           para
-          <Text style={styles.person}> CLEYTON DE SOUZA COSTA</Text>
+          <Text style={styles.person}> Felipe André Roberto </Text>
         </Text>
 
         <View style={styles.transferring}>

@@ -112,6 +112,7 @@ export const styles = StyleSheet.create({
   },
   person: {
     fontFamily: FONTS.BOLD,
+    textTransform: "uppercase"
   },
 
   btn: {
