@@ -20,8 +20,8 @@ export const styles = StyleSheet.create({
   subtitle: {
     color: COLORS.WHITE,
     fontSize: 15,
-    marginTop: 25,
-    marginLeft: -108,
+    // marginTop: 25,
+    // marginLeft: -108,
   },
 
   profile: {

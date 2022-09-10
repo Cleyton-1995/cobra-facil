@@ -1,12 +1,17 @@
 import { AntDesign, Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollView, TouchableOpacity, View } from "react-native";
 import { ButtonHomePage } from "../../components/Form/ButtonHomePage";
 import { FooterHP } from "../../components/Form/FooterHP";
 import { ProfileHeaders } from "../../components/Header/ProfileHeaders";
+import { api } from "../../services/api";
 
 import { styles } from "./styles";
+
+interface UserProps {
+  name: string;
+}
 
 export function HomePage() {
   const navigation = useNavigation();
@@ -26,10 +31,26 @@ export function HomePage() {
     navigation.navigate("customerlist");
   }
 
+  const [ user, setUser ] =  useState<UserProps>();
+
+  async function getUser() { 
+    try {
+      const user = await api.get("/user/5");
+      setUser(user.data) 
+      console.log("user", user.data);
+    } catch (error) {
+      console.log("error", error);
+    };
+  };
+
+  useEffect(() => {
+    getUser()
+  }, []);
+
   return (
     <ScrollView>
       <View style={styles.container}>
-        <ProfileHeaders onPress={myProfile} title="Olá, Pedro!" />
+        <ProfileHeaders onPress={myProfile} title={`Olá ${user?.name}`} />
       </View>
       <View style={styles.content}>
 

@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Input } from "../../components/Form/Input";
 import { Header } from "../../components/Header/HeaderWelcome";
+import { api } from "../../services/api";
 
 import { styles } from "./styles";
 
 export function Login() {
-
-  const [ email, setEmail ] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const navigation = useNavigation();
   function openRecoverPassword() {
@@ -19,8 +20,18 @@ export function Login() {
     navigation.navigate("registration");
   }
 
-  function login() {
-    navigation.navigate("homepage")
+  async function login() {
+    try {
+      const user = await api.post("/login", {
+        email: email,
+        password: password,
+      });
+      navigation.navigate("homepage", 
+      // {
+      //   id: user.data.id,
+      // }
+      );
+    } catch (error) {}
   }
 
   return (
@@ -34,14 +45,14 @@ export function Login() {
               label="E-mail"
               placeholder="Seu e-mail"
               value={email}
-              onChageText={setEmail}
+              onChangeText={(value: string) => setEmail(value)}
             />
             <Input
               label="Senha"
               placeholder="Sua senha"
               type="password"
               secureTextEntry
-
+              onChangeText={(value: string) => setPassword(value)}
             />
           </View>
           <TouchableOpacity activeOpacity={0.8}>

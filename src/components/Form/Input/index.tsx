@@ -11,15 +11,16 @@ interface InputProps {
   color?: string;
   secureTextEntry?: boolean;
   value?: string;
-  onChageText?: Function;
+  onChangeText?: any;
 }
 
-export function Input({ label, placeholder, secureTextEntry}: InputProps) {
+export function Input({ label, placeholder, secureTextEntry, onChangeText}: InputProps) {
   const [sec, setSec] = useState(secureTextEntry);
   return (
     <View style={styles.container}>
       <Text style={styles.email}>{label}</Text>
       <TextInput
+        onChangeText={onChangeText}
         style={styles.input}
         placeholder={placeholder}
         secureTextEntry={sec}
