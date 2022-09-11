@@ -1,6 +1,6 @@
-import { AntDesign, Entypo, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Entypo } from "@expo/vector-icons";
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 import { styles } from "./styles";
 
@@ -28,17 +28,6 @@ export function ProfileHeaders({ title, onPress }: HeaderPtops) {
       </TouchableOpacity>
       <View>
         <Text style={styles.balance}>Saldo em conta</Text>
-        <Text style={styles.balanceInput}>
-          R$ <Text style={{ color: "#0073FB", fontSize: 18 }}>1920,00</Text>
-        </Text>
-        <TouchableOpacity>
-          <Ionicons
-            style={{ marginLeft: -20, marginTop: -35, color: "#8D8D99" }}
-            name="eye"
-            color="COLORS.GRAY_PRIMARY"
-            size={20}
-          />
-        </TouchableOpacity>
       </View>
     </View>
   );

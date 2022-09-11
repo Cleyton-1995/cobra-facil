@@ -2,6 +2,7 @@ import { AntDesign, Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import { ScrollView, TouchableOpacity, View } from "react-native";
+import { BalanceInput } from "../../components/Form/BalanceInput";
 import { ButtonHomePage } from "../../components/Form/ButtonHomePage";
 import { FooterHP } from "../../components/Form/FooterHP";
 import { ProfileHeaders } from "../../components/Header/ProfileHeaders";
@@ -14,6 +15,7 @@ interface UserProps {
 }
 
 export function HomePage() {
+
   const navigation = useNavigation();
   function myProfile() {
     navigation.navigate("myprofile");
@@ -31,42 +33,58 @@ export function HomePage() {
     navigation.navigate("customerlist");
   }
 
-  const [ user, setUser ] =  useState<UserProps>();
+  const [user, setUser] = useState<UserProps>();
 
-  async function getUser() { 
+  async function getUser() {
     try {
-      const user = await api.get("/user/5");
-      setUser(user.data) 
+      const user = await api.get("/user/4");
+      setUser(user.data);
       console.log("user", user.data);
     } catch (error) {
       console.log("error", error);
-    };
-  };
+    }
+  }
 
   useEffect(() => {
-    getUser()
+    getUser();
   }, []);
 
   return (
     <ScrollView>
       <View style={styles.container}>
         <ProfileHeaders onPress={myProfile} title={`Olá ${user?.name}`} />
+        <BalanceInput secureTextEntry />
       </View>
       <View style={styles.content}>
-
-        <TouchableOpacity onPress={createCharge} activeOpacity={0.98} style={styles.charge}>
+        <TouchableOpacity
+          onPress={createCharge}
+          activeOpacity={0.98}
+          style={styles.charge}
+        >
           <ButtonHomePage onPress={createCharge} title="Criar Cobrança" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={invoicing} activeOpacity={0.98} style={styles.invoicing}>
+        <TouchableOpacity
+          onPress={invoicing}
+          activeOpacity={0.98}
+          style={styles.invoicing}
+        >
           <ButtonHomePage onPress={invoicing} title="Faturamento" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={transfer} activeOpacity={0.98} style={ styles.transfer}>
+        <TouchableOpacity
+          onPress={transfer}
+          activeOpacity={0.98}
+          style={styles.transfer}
+        >
           <ButtonHomePage onPress={transfer} title="Transferir" />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={customers} activeOpacity={0.98} style={styles.customers}>
+        <TouchableOpacity
+          onPress={customers}
+          activeOpacity={0.98}
+          style={styles.customers}
+        >
           <ButtonHomePage onPress={customers} title="Clientes" />
         </TouchableOpacity>
         <AntDesign style={styles.plus} name="plus" size={24} color="#0073FB" />

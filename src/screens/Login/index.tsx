@@ -26,10 +26,9 @@ export function Login() {
         email: email,
         password: password,
       });
+
       navigation.navigate("homepage", 
-      // {
-      //   id: user.data.id,
-      // }
+        user.data.id,
       );
     } catch (error) {}
   }

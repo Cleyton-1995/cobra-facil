@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
   },
 
   balance: {
-    marginTop: 80,
+    marginTop: 75,
     right: 300,
     color: COLORS.WHITE,
     fontSize: 12,

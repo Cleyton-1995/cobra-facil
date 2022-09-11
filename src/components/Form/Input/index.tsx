@@ -1,14 +1,14 @@
 import { Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { TextInput, TouchableOpacity, View, Text } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
 import { styles } from "./styles";
 
 interface InputProps {
-  label: string;
+  label?: string;
   placeholder: string;
   type?: string;
-  color?: string;
+  color?: string; 
   secureTextEntry?: boolean;
   value?: string;
   onChangeText?: any;
