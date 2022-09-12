@@ -21,7 +21,7 @@ export function BalanceInput({secureTextEntry, color="#0073FB" }: BalanceInputPr
           
         />
         <Text style={{position: 'absolute', top: -68, marginLeft: 30, fontSize: 15}}>R$</Text>
-        <TextInput style={{ top: -115, marginLeft: 60, fontSize: 18, color: color }} secureTextEntry={sec} editable={false} >1920,00</TextInput>
+        <TextInput style={{ top: -116, marginLeft: 60, fontSize: 18, color: color }} secureTextEntry={sec} editable={false} >1920,00</TextInput>
         {secureTextEntry && (
           <TouchableOpacity onPress={() => setSec(!sec)} style={styles.icon}>
             <Ionicons

@@ -7,6 +7,8 @@ import { api } from "../../services/api";
 
 import { styles } from "./styles";
 
+
+
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,13 +24,15 @@ export function Login() {
 
   async function login() {
     try {
-      const user = await api.post("/login", {
+      const { data } = await api.post("/login", {
         email: email,
         password: password,
       });
 
       navigation.navigate("homepage", 
-        user.data.id,
+          {
+            id: data.id,
+          }
       );
     } catch (error) {}
   }
@@ -45,6 +49,7 @@ export function Login() {
               placeholder="Seu e-mail"
               value={email}
               onChangeText={(value: string) => setEmail(value)}
+              keyboardType="email-address"
             />
             <Input
               label="Senha"

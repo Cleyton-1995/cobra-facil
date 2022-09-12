@@ -17,8 +17,8 @@ export const styles = StyleSheet.create({
   },
 
   balance: {
-    top: -190,
-    marginTop: 80,
+    top: -480,
+    marginTop: 50,
     marginLeft: 20,
     color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,

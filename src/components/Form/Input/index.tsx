@@ -12,9 +12,10 @@ interface InputProps {
   secureTextEntry?: boolean;
   value?: string;
   onChangeText?: any;
+  keyboardType?: string;
 }
 
-export function Input({ label, placeholder, secureTextEntry, onChangeText}: InputProps) {
+export function Input({ label, placeholder, secureTextEntry, onChangeText, keyboardType}: InputProps) {
   const [sec, setSec] = useState(secureTextEntry);
   return (
     <View style={styles.container}>
@@ -24,6 +25,7 @@ export function Input({ label, placeholder, secureTextEntry, onChangeText}: Inpu
         style={styles.input}
         placeholder={placeholder}
         secureTextEntry={sec}
+        keyboardType="email-address"
       />
       {secureTextEntry && (
         <TouchableOpacity onPress={() => setSec(!sec)} style={styles.icon}>

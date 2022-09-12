@@ -14,7 +14,12 @@ interface UserProps {
   name: string;
 }
 
-export function HomePage() {
+interface HomePageProps {
+  route: string;
+}
+
+export function HomePage({ route }: HomePageProps) {
+  console.log("Estou aqui", route);
 
   const navigation = useNavigation();
   function myProfile() {
@@ -37,7 +42,7 @@ export function HomePage() {
 
   async function getUser() {
     try {
-      const user = await api.get("/user/4");
+      const user = await api.get(`/user/${route.params.id}`);
       setUser(user.data);
       console.log("user", user.data);
     } catch (error) {
