@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   AsyncStorage,
   ScrollView,
@@ -17,20 +17,11 @@ import { Profile } from "../../components/Header/Profile";
 
 import { styles } from "./styles";
 
-type CardProps = {
-  id: string;
-  bank: string;
-  account: string;
-  agency: string;
-}
-
 interface MyProfileProps {
   onChangeText?: boolean;
-  data: CardProps;
 };
 
 export function MyProfile({ onChangeText }: MyProfileProps) {
-  const [ data, setData ] = useState<CardProps[]>([])
 
   const navigation = useNavigation();
   function backMyProfile() {
@@ -53,38 +44,32 @@ export function MyProfile({ onChangeText }: MyProfileProps) {
         id,
         bank,
         account,
-        agency,
-      };
+        agency
+      }
 
-      await AsyncStorage.setItem(
-        "@cobranca-facil:bank",
-        JSON.stringify(newData)
-        );
-        console.log(newData);
+    await AsyncStorage.setItem("@cobranca-facil:userData", JSON.stringify(newData));
+
+
+      // const response = await getItem();
+      // const previousData = response ? JSON.parse(response) : [];
+
+      // const data = [newData];
+      // console.log(data);
+
+      // await setItem(JSON.stringify(data));
       Toast.show({
         type: "success",
-        text1: "Cadastro com sucesso",
-      });
-    } catch (err) {
-      console.log(err);
+        text1: "Cadastrado com sucesso!"
+      })
+    } catch (error) {
+      console.log(error);
 
       Toast.show({
         type: "error",
-        text1: "Cadastro não realizado"
-      });
+        text1: "Não foi possível cadastrar."
+      })
     }
-
-
-    async function handleFectchData() {
-      const response = await AsyncStorage.getItem("@cobranca-facil:bank");
-      const data = response ? JSON.parse(response) : {};
-      setData([data]);
-      console.log(response);
-    }
-
-    useEffect(() =>{
-      handleFectchData();
-    }, [])
+    navigation.navigate("profileuser")
   }
 
   return (
