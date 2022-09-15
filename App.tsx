@@ -1,14 +1,13 @@
-import React from 'react';
-import "react-native-gesture-handler";
 import {
-  useFonts,
   Roboto_400Regular,
-  Roboto_700Bold,
+  Roboto_700Bold, useFonts
 } from "@expo-google-fonts/roboto";
 import AppLoading from "expo-app-loading";
-import { Routes } from './src/routes';
+import React from 'react';
 import { StatusBar } from 'react-native';
-import { Home } from './src/screens/Home';
+import "react-native-gesture-handler";
+import { Routes } from "./src/routes";
+// import { Home } from './src/screens/ProfileUser';
 
 export default function App() {
     const [fontsLoaded] = useFonts({

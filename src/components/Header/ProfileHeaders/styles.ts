@@ -15,11 +15,14 @@ export const styles = StyleSheet.create({
     color: COLORS.WHITE,
     fontFamily: FONTS.BOLD,
     fontSize: 20,
+    marginLeft: 50,
   },
 
   subtitle: {
     color: COLORS.WHITE,
     fontSize: 15,
+    marginLeft: 50,
+
     // marginTop: 25,
     // marginLeft: -108,
   },

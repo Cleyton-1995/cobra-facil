@@ -99,4 +99,18 @@ export const styles = StyleSheet.create({
     paddingTop: 60,
     paddingLeft: 10,
   },
+
+  profile: {
+    width: 40,
+    height: 40,
+    backgroundColor: COLORS.WHITE,
+    borderRadius: 50,
+    paddingTop: 8,
+    paddingLeft: 8,
+    marginRight: 8,
+    marginTop: 5,
+    position: 'absolute',
+    marginLeft: 20,
+    top: 50,
+  },
 });

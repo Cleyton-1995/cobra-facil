@@ -54,11 +54,16 @@ export function HomePage({ route }: HomePageProps) {
     getUser();
   }, []);
 
+  function profileUser() {
+    navigation.navigate("profileuser");
+  }
+
   return (
     <ScrollView>
       <View style={styles.container}>
         <ProfileHeaders onPress={myProfile} title={`Olá ${user?.name}`} />
         <BalanceInput secureTextEntry />
+        <AntDesign onPress={profileUser} style={styles.profile} name="user" size={24} color="#0073FB" />
       </View>
       <View style={styles.content}>
         <TouchableOpacity

@@ -1,29 +1,37 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import {
+  AsyncStorage,
   ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
   View
 } from "react-native";
+import Toast from "react-native-toast-message";
+import uuid from "react-native-uuid";
 import { BackButton } from "../../components/Form/BackButton";
 import { BankData } from "../../components/Header/BankData";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { Profile } from "../../components/Header/Profile";
-import { api } from "../../services/api";
 
 import { styles } from "./styles";
 
-interface UserProps {
-  name: string;
+type CardProps = {
+  id: string;
+  bank: string;
+  account: string;
+  agency: string;
 }
 
 interface MyProfileProps {
   onChangeText?: boolean;
-}
+  data: CardProps;
+};
 
 export function MyProfile({ onChangeText }: MyProfileProps) {
+  const [ data, setData ] = useState<CardProps[]>([])
+
   const navigation = useNavigation();
   function backMyProfile() {
     navigation.navigate("homepage");
@@ -33,43 +41,56 @@ export function MyProfile({ onChangeText }: MyProfileProps) {
     navigation.navigate("login");
   }
 
-  const [user, setUser] = useState<UserProps>();
+  const [bank, setBank] = useState("");
+  const [account, setAccount] = useState("");
+  const [agency, setAgency] = useState("");
 
-  async function getUser() {
+  async function handleNew() {
     try {
-      const user = await api.get("/user/4");
-      setUser(user.data);
-      console.log("user", user.data);
-    } catch (error) {
-      console.log("error", error);
+      const id = uuid.v4();
+
+      const newData = {
+        id,
+        bank,
+        account,
+        agency,
+      };
+
+      await AsyncStorage.setItem(
+        "@cobranca-facil:bank",
+        JSON.stringify(newData)
+        );
+        console.log(newData);
+      Toast.show({
+        type: "success",
+        text1: "Cadastro com sucesso",
+      });
+    } catch (err) {
+      console.log(err);
+
+      Toast.show({
+        type: "error",
+        text1: "Cadastro não realizado"
+      });
     }
+
+
+    async function handleFectchData() {
+      const response = await AsyncStorage.getItem("@cobranca-facil:bank");
+      const data = response ? JSON.parse(response) : {};
+      setData([data]);
+      console.log(response);
+    }
+
+    useEffect(() =>{
+      handleFectchData();
+    }, [])
   }
 
-  useEffect(() => {
-    getUser();
-  }, []);
-
-  const [bank, setBank] = useState<String>();
-  const [account, setAccount] = useState<String>();
-  const [agency, setAgency] = useState<String>();
-
-  async function saveData() {
-    try {
-      const user = await api.patch("/user/3", {
-        bank: bank,
-        account: account,
-        agency: agency,
-      });
-      navigation.navigate("homepage");
-    } catch (error) {
-      console.log("error", error);
-    };
-  };
-
   return (
-    <ScrollView>
+    <ScrollView >
       <View style={styles.container}>
-        <Profile title={`Perfil de ${user?.name}`} />
+        <Profile title={"Olá"} />
         <View style={styles.back}>
           <BackButton onPress={backMyProfile} title="Voltar" color="#ffffff" />
         </View>
@@ -77,25 +98,29 @@ export function MyProfile({ onChangeText }: MyProfileProps) {
       </View>
       <View style={styles.content}>
         <View style={styles.view}>
-          <TextInput style={styles.textInput}>Banco</TextInput>
+          <TextInput editable={false} style={styles.textInput}>Banco</TextInput>
           <TextInput
             style={styles.input}
             placeholder="Selecione o Banco"
-            onChangeText={(value: string) => setBank(value)}
+            onChangeText={setBank}
+            // data={data}
+            // value={bank}
           />
-          <TextInput style={styles.textInput}>Conta</TextInput>
+          <TextInput editable={false} style={styles.textInput}>Conta</TextInput>
           <TextInput
             style={styles.input}
             placeholder="Número da sua conta"
-            onChangeText={(value: string) => setAccount(value)}
+            onChangeText={setAccount}
+            // value={account}
           />
-          <TextInput style={styles.textInput}>Agência</TextInput>
+          <TextInput editable={false} style={styles.textInput}>Agência</TextInput>
           <TextInput
             style={styles.input}
             placeholder="Número da agência"
-            onChangeText={(value: string) => setAgency(value)}
+            onChangeText={setAgency}
+            // value={agency}
           />
-          <TouchableOpacity onPress={saveData} activeOpacity={0.8}>
+          <TouchableOpacity onPress={handleNew} activeOpacity={0.8}>
             <Text style={styles.touchableOpacity}>Salvar dados bancários</Text>
           </TouchableOpacity>
         </View>

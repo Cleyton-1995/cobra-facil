@@ -1,25 +1,23 @@
-import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login } from "../screens/Login";
-import { Welcome } from "../screens/Welcome";
-import { WelcomeOne } from "../screens/WelcomeOne";
-import { WelcomeTwo } from "../screens/WelcomeTwo";
-import { RecoverPassword } from "../screens/RecoverPassword";
-import { Registrarion } from "../screens/Registration";
+import React from "react";
+import { CustomerList } from "../screens/CustomerList";
+import { CustomerProfile } from "../screens/CustomerProfile";
 import { HomePage } from "../screens/HomePage";
+import { HomeScreens } from "../screens/HomeScreens";
+import { InsertPassword } from "../screens/InsertPassword";
+import { Login } from "../screens/Login";
 import { MyProfile } from "../screens/MyProfile";
 import { NewCharge } from "../screens/NewCharge";
-import { CustomerList } from "../screens/CustomerList";
 import { NewCustomer } from "../screens/NewCustomer";
-import { CustomerProfile } from "../screens/CustomerProfile";
 import { PixArea } from "../screens/PixArea";
+import { ProfileUser } from "../screens/ProfileUser";
+import { RecoverPassword } from "../screens/RecoverPassword";
+import { Registrarion } from "../screens/Registration";
+import { SelectInstitution } from "../screens/SelectInstitution";
+import { SendProof } from "../screens/SendProof";
+import { TransferringDate } from "../screens/TransferringDate";
 import { TransferValue } from "../screens/TransferValue";
 import { TypeYourPix } from "../screens/TypeYourPix";
-import { SelectInstitution } from "../screens/SelectInstitution";
-import { TransferringDate } from "../screens/TransferringDate";
-import { InsertPassword } from "../screens/InsertPassword";
-import { SendProof } from "../screens/SendProof";
-import { HomeScreens } from "../screens/HomeScreens";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -46,6 +44,7 @@ export function StackRoutes () {
       <Screen name="transferringdate" component={ TransferringDate } />
       <Screen name="insertpassword" component={ InsertPassword } />
       <Screen name="sendproof" component={ SendProof } />
+      <Screen name="profileuser" component={ ProfileUser } />
     </Navigator>
   );
 }
