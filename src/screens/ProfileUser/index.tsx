@@ -23,6 +23,7 @@ export function ProfileUser() {
   useFocusEffect(useCallback(() => {
     handleFetchData();
   }, []));
+
   
   const navigation = useNavigation();
   function back() {

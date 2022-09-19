@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.BOLD,
     fontSize: 20,
     marginLeft: 50,
+    width: 210,
   },
 
   subtitle: {
@@ -40,12 +41,12 @@ export const styles = StyleSheet.create({
 
   entypo: {
     marginTop: 10,
-    marginLeft: 70,
+    marginLeft: 40,
   },
 
   balance: {
     marginTop: 75,
-    right: 300,
+    right: 310,
     color: COLORS.WHITE,
     fontSize: 12,
   },

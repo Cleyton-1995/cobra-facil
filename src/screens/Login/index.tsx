@@ -55,8 +55,8 @@ export function Login() {
               label="Senha"
               placeholder="Sua senha"
               type="password"
-              secureTextEntry
               onChangeText={(value: string) => setPassword(value)}
+              secureTextEntry
             />
           </View>
           <TouchableOpacity activeOpacity={0.8}>

@@ -24,8 +24,8 @@ export function Input({ label, placeholder, secureTextEntry, onChangeText, keybo
         onChangeText={onChangeText}
         style={styles.input}
         placeholder={placeholder}
-        secureTextEntry={sec}
         keyboardType="email-address"
+        secureTextEntry={sec}
       />
       {secureTextEntry && (
         <TouchableOpacity onPress={() => setSec(!sec)} style={styles.icon}>

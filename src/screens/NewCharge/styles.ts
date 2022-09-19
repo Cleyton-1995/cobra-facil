@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../themes/colors';
-  import { FONTS } from '../../themes/fonts';
+import { FONTS } from '../../themes/fonts';
 
 export const styles = StyleSheet.create({
   container: {
@@ -158,7 +158,7 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.BOLD,
     color: COLORS.BLUE_500,
     marginBottom: 5,
-    marginLeft: 15,
+    marginLeft: 5,
     padding: 10,
   },
   

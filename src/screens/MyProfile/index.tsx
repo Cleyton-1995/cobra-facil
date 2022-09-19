@@ -14,15 +14,15 @@ import { BackButton } from "../../components/Form/BackButton";
 import { BankData } from "../../components/Header/BankData";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { Profile } from "../../components/Header/Profile";
+import { api } from "../../services/api";
 
 import { styles } from "./styles";
 
 interface MyProfileProps {
   onChangeText?: boolean;
-};
+}
 
 export function MyProfile({ onChangeText }: MyProfileProps) {
-
   const navigation = useNavigation();
   function backMyProfile() {
     navigation.navigate("homepage");
@@ -32,48 +32,67 @@ export function MyProfile({ onChangeText }: MyProfileProps) {
     navigation.navigate("login");
   }
 
-  const [bank, setBank] = useState("");
-  const [account, setAccount] = useState("");
-  const [agency, setAgency] = useState("");
+  const [bank, setBank] = useState<String>();
+  const [account, setAccount] = useState<String>();
+  const [agency, setAgency] = useState<String>();
 
-  async function handleNew() {
-    try {
-      const id = uuid.v4();
+    async function dataBank() {
+      try {
+        const id = uuid.v4();
 
-      const newData = {
-        id,
-        bank,
-        account,
-        agency
-      }
+        const bankData = await api.post("/bank", {
+          bank: bank,
+          account: account,
+          agency: agency,
+        });
 
-    await AsyncStorage.setItem("@cobranca-facil:userData", JSON.stringify(newData));
+        Toast.show({
+          type: "success",
+          text1: "Cadastrado com sucesso!",
+        });
+      } catch (error) {
+        console.log(error);
 
+        Toast.show({
+          type: "error",
+          text1: "Não foi possível cadastrar.",
+        });
+      };
+    };
 
-      // const response = await getItem();
-      // const previousData = response ? JSON.parse(response) : [];
+    async function handleNew() {
+      try {
+        const id = uuid.v4();
 
-      // const data = [newData];
-      // console.log(data);
+        const newData = {
+          id,
+          bank,
+          account,
+          agency,
+        };
 
-      // await setItem(JSON.stringify(data));
-      Toast.show({
-        type: "success",
-        text1: "Cadastrado com sucesso!"
-      })
-    } catch (error) {
-      console.log(error);
+        await AsyncStorage.setItem(
+          "@cobranca-facil:userData",
+          JSON.stringify(newData)
+        );
 
-      Toast.show({
-        type: "error",
-        text1: "Não foi possível cadastrar."
-      })
-    }
-    navigation.navigate("profileuser")
-  }
+        Toast.show({
+          type: "success",
+          text1: "Cadastrado com sucesso!",
+        });
+      } catch (error) {
+        console.log(error);
+
+        Toast.show({
+          type: "error",
+          text1: "Não foi possível cadastrar.",
+        });
+      };
+      navigation.navigate("profileuser");
+    };
 
   return (
-    <ScrollView >
+    <ScrollView>
       <View style={styles.container}>
         <Profile title={"Olá"} />
         <View style={styles.back}>
@@ -83,29 +102,31 @@ export function MyProfile({ onChangeText }: MyProfileProps) {
       </View>
       <View style={styles.content}>
         <View style={styles.view}>
-          <TextInput editable={false} style={styles.textInput}>Banco</TextInput>
+          <TextInput editable={false} style={styles.textInput}>
+            Banco
+          </TextInput>
           <TextInput
             style={styles.input}
             placeholder="Selecione o Banco"
             onChangeText={setBank}
-            // data={data}
-            // value={bank}
           />
-          <TextInput editable={false} style={styles.textInput}>Conta</TextInput>
+          <TextInput editable={false} style={styles.textInput}>
+            Conta
+          </TextInput>
           <TextInput
             style={styles.input}
             placeholder="Número da sua conta"
             onChangeText={setAccount}
-            // value={account}
           />
-          <TextInput editable={false} style={styles.textInput}>Agência</TextInput>
+          <TextInput editable={false} style={styles.textInput}>
+            Agência
+          </TextInput>
           <TextInput
             style={styles.input}
             placeholder="Número da agência"
             onChangeText={setAgency}
-            // value={agency}
           />
-          <TouchableOpacity onPress={handleNew} activeOpacity={0.8}>
+          <TouchableOpacity onPress={handleNew} onPressIn={dataBank} activeOpacity={0.8}>
             <Text style={styles.touchableOpacity}>Salvar dados bancários</Text>
           </TouchableOpacity>
         </View>
