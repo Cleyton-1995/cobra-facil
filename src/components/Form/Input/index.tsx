@@ -13,9 +13,11 @@ interface InputProps {
   value?: string;
   onChangeText?: any;
   keyboardType?: string;
+  autoCapitalize?: boolean;
+
 }
 
-export function Input({ label, placeholder, secureTextEntry, onChangeText, keyboardType}: InputProps) {
+export function Input({ label, placeholder, secureTextEntry, onChangeText, keyboardType, autoCapitalize}: InputProps) {
   const [sec, setSec] = useState(secureTextEntry);
   return (
     <View style={styles.container}>
@@ -26,6 +28,7 @@ export function Input({ label, placeholder, secureTextEntry, onChangeText, keybo
         placeholder={placeholder}
         keyboardType="email-address"
         secureTextEntry={sec}
+        autoCapitalize="none"
       />
       {secureTextEntry && (
         <TouchableOpacity onPress={() => setSec(!sec)} style={styles.icon}>

@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingTop: getStatusBarHeight() + 17,
     backgroundColor: COLORS.GRAY_QUINTENAY,
-    height: 800,
+    // height: 850,
   },
 
 
@@ -89,12 +89,23 @@ export const styles = StyleSheet.create({
     color: COLORS.WHITE,
     borderRadius: 5,
     fontSize: 17,
-    marginTop: 50,
+    marginTop: 40,
+    marginBottom: 40,
   },
 
   icon: {
     position: 'absolute',
     bottom: 20,
     left: 280,
-  }
+  },
+
+  listContent: {
+    padding: 24,
+    paddingBottom: 50
+  },
+
+  list: {
+    flex: 1,
+    width: '100%'
+  },
 });

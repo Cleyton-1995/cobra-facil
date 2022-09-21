@@ -1,22 +1,53 @@
-import React from "react";
+import { AntDesign } from "@expo/vector-icons";
+import { useAsyncStorage } from "@react-native-async-storage/async-storage";
+import { useNavigation } from "@react-navigation/native";
+import React, { useState } from "react";
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import "react-native-gesture-handler";
-import {
-  ScrollView,
-  TextInput,
-  View,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import Toast from "react-native-toast-message";
+import uuid from 'react-native-uuid';
+import { BackButton } from "../../components/Form/BackButton";
 import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { MostHeaders } from "../../components/Header/MostHeaders";
 import { styles } from "./styles";
-import { AntDesign } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-import { BackButton } from "../../components/Form/BackButton";
 
 export function NewCustomer () {
   const navigation = useNavigation();
   function backScreenHome() {
+    navigation.navigate("customerlist");
+  };
+
+  const [name, setName] = useState("");
+
+  const { getItem, setItem } = useAsyncStorage("@COBRA_FACIL:CustomerList");
+
+  async function handleNew() {
+    try {
+      const id = uuid.v4();
+
+      const newData = {
+        id,
+        name,
+      }
+
+      const response = await getItem();
+      const previousData = response ? JSON.parse(response) : [];
+
+      const data = [...previousData, newData];
+
+      await setItem(JSON.stringify(data));
+      Toast.show({
+        type: "success",
+        text1: "Cadastrado com sucesso!"
+      })
+    } catch (error) {
+      console.log(error);
+
+      Toast.show({
+        type: "error",
+        text1: "Não foi possível cadastrar."
+      })
+    }
     navigation.navigate("customerlist");
   }
 
@@ -34,6 +65,8 @@ export function NewCustomer () {
           <TextInput
             style={styles.customerNameInput}
             placeholder="Nome completo do cliente"
+            onChangeText={setName}
+
           />
           <Text style={styles.contact}>Telefone</Text>
           <TextInput
@@ -80,7 +113,7 @@ export function NewCustomer () {
           </View>
         </View>
 
-        <TouchableOpacity activeOpacity={0.8}>
+        <TouchableOpacity onPress={handleNew} activeOpacity={0.8}>
           <Text style={styles.btn}>Salvar dados do cliente</Text>
         </TouchableOpacity>
       </View>

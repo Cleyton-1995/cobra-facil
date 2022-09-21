@@ -50,6 +50,7 @@ export function Login() {
               value={email}
               onChangeText={(value: string) => setEmail(value)}
               keyboardType="email-address"
+              autoCapitalize
             />
             <Input
               label="Senha"
