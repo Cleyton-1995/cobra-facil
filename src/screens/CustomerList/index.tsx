@@ -33,9 +33,8 @@ export function CustomerList() {
     phone: string;
     document: string;
   };
-  
+
   const [customers, setCustomers] = useState<CustomersProps[]>([]);
-  console.log(customers);
 
   async function getCustomers() {
     const response = await api.get("/customers");
@@ -44,10 +43,18 @@ export function CustomerList() {
 
   useFocusEffect(
     useCallback(() => {
-      console.log("estou aqui");
       getCustomers();
     }, [])
   );
+
+  const [filter, setFilter] = useState<CustomersProps[]>([]);
+
+  function handleFilter(filter: string) {
+    const teste = customers.filter((customer) =>
+      customer.name.includes(filter)
+    );
+    setFilter(teste);
+  }
 
   return (
     <ScrollView>
@@ -57,11 +64,27 @@ export function CustomerList() {
         </TouchableOpacity>
         <MostHeaders title="Seus Clientes" />
         <ImageHeaders />
-        <TextInput placeholder="Pesquisar     🔍" style={styles.search} />
-
-        {customers.map((customer) => {
+        <TextInput
+          placeholder="Pesquisar 🔍"
+          style={styles.search}
+          onChangeText={(value) => handleFilter(value)}
+        />
+        {filter.length > 0 ?
+          filter.map((customer, index) => {
+            return (
+              <CardCustomer
+                key={index}
+                data={{
+                  name: customer.name,
+                }}
+              />
+            );
+          })
+        :
+        customers.map((customer, index) => {
           return (
             <CardCustomer
+              key={index}
               data={{
                 name: customer.name,
                 phone: "123456",

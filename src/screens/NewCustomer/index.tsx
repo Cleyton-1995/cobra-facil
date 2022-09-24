@@ -21,7 +21,7 @@ export function NewCustomer () {
 
   async function createCustomer() {
     try {
-      const user = await api.post("/customers", {
+      const customer = await api.post("/customers", {
         name: name,
         document: document,
         phone: phone,

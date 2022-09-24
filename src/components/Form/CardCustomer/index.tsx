@@ -5,10 +5,10 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles';
 
 export type CardProps = {
-  id: string;
+  id?: string;
   name: string;
-  phone: string;
-  document: string;
+  phone?: string;
+  document?: string;
 }
 type Props = {
   data: CardProps;
