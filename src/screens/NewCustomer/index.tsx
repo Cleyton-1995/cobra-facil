@@ -1,14 +1,12 @@
 import { AntDesign } from "@expo/vector-icons";
-import { useAsyncStorage } from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import "react-native-gesture-handler";
-import Toast from "react-native-toast-message";
-import uuid from 'react-native-uuid';
 import { BackButton } from "../../components/Form/BackButton";
 import { ImageHeaders } from "../../components/Header/ImageHeaders";
 import { MostHeaders } from "../../components/Header/MostHeaders";
+import { api } from "../../services/api";
 import { styles } from "./styles";
 
 export function NewCustomer () {
@@ -17,38 +15,22 @@ export function NewCustomer () {
     navigation.navigate("customerlist");
   };
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState<String>();
+  const [document, setDocument] = useState<String>();
+  const [phone, setPhone] = useState<String>();
 
-  const { getItem, setItem } = useAsyncStorage("@COBRA_FACIL:CustomerList");
-
-  async function handleNew() {
+  async function createCustomer() {
     try {
-      const id = uuid.v4();
-
-      const newData = {
-        id,
-        name,
-      }
-
-      const response = await getItem();
-      const previousData = response ? JSON.parse(response) : [];
-
-      const data = [...previousData, newData];
-
-      await setItem(JSON.stringify(data));
-      Toast.show({
-        type: "success",
-        text1: "Cadastrado com sucesso!"
-      })
+      const user = await api.post("/customers", {
+        name: name,
+        document: document,
+        phone: phone,
+      });
+      navigation.navigate("customerlist")
+      
     } catch (error) {
-      console.log(error);
-
-      Toast.show({
-        type: "error",
-        text1: "Não foi possível cadastrar."
-      })
+      console.log("error", error)
     }
-    navigation.navigate("customerlist");
   }
 
   return (
@@ -65,13 +47,14 @@ export function NewCustomer () {
           <TextInput
             style={styles.customerNameInput}
             placeholder="Nome completo do cliente"
-            onChangeText={setName}
+            onChangeText={(value: string) => setName(value)}
 
           />
           <Text style={styles.contact}>Telefone</Text>
           <TextInput
             style={styles.contactInput}
             placeholder="( ) - - - - _ - - - -"
+            onChangeText={(value: string) => setPhone(value)}
           />
         </View>
 
@@ -86,6 +69,7 @@ export function NewCustomer () {
           <TextInput
             style={styles.contactInput}
             placeholder=" - - - . - - - . - - -   - -"
+            onChangeText={(value: string) => setDocument(value)}
           />
         </View>
 
@@ -113,7 +97,7 @@ export function NewCustomer () {
           </View>
         </View>
 
-        <TouchableOpacity onPress={handleNew} activeOpacity={0.8}>
+        <TouchableOpacity onPress={createCustomer} activeOpacity={0.8}>
           <Text style={styles.btn}>Salvar dados do cliente</Text>
         </TouchableOpacity>
       </View>
