@@ -23,10 +23,6 @@ export function CustomerList() {
   function addNewCustomer() {
     navigation.navigate("newcustomer");
   }
-  function openCustomerProfile() {
-    navigation.navigate("customerprofile");
-  }
-
   type CustomersProps = {
     id: string;
     name: string;
