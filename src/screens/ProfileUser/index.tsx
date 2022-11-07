@@ -1,28 +1,48 @@
 import { MaterialIcons } from "@expo/vector-icons";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import React, { useCallback, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { BackButton } from "../../components/Form/BackButton";
-import { Card, CardProps } from "../../components/Form/Card";
+import { Card } from "../../components/Form/Card";
 import { ImageHeadersWhite } from "../../components/Header/ImageHeadersWhite";
 import { Profile } from "../../components/Header/Profile";
+import { api } from "../../services/api";
 
 import { styles } from "./styles";
 
 export function ProfileUser() {
-  const [data, setData] = useState<CardProps[]>([]);
+  // const [data, setData] = useState<CardProps[]>([]);
 
-  async function handleFetchData() {
-    const response = await AsyncStorage.getItem("@cobranca-facil:userData");
-    const data = response ? JSON.parse(response) : {};
-    setData(data);
+  // async function handleFetchData() {
+  //   const response = await AsyncStorage.getItem("@cobranca-facil:userData");
+  //   const data = response ? JSON.parse(response) : {};
+  //   setData(data);
+  // }
+
+
+  // useFocusEffect(useCallback(() => {
+  //   handleFetchData();
+  // }, []));
+
+  type BanksProps = {
+    id: string;
+    bank: string;
+    account: string;
+    agency: string;
+  };
+
+  const [banks, setBanks] = useState<BanksProps[]>([]);
+
+  async function getBanks() {
+    const response = await api.get("/bank");
+    setBanks(response.data);
   }
 
-
-  useFocusEffect(useCallback(() => {
-    handleFetchData();
-  }, []));
+  useFocusEffect(
+    useCallback(() => {
+      getBanks();
+    }, [])
+  );
 
   
   const navigation = useNavigation();
@@ -47,7 +67,22 @@ export function ProfileUser() {
       />
 
       <ImageHeadersWhite />
-      <Card data={data}/>
+      {/* <Card data={data}/> */}
+
+      {
+        banks.map((bank, index) => {
+          return (
+            <Card
+              key={index}
+              data={{
+                bank: bank.bank,
+                account: bank.account,
+                agency: bank.agency,
+              }}
+            />
+          );
+        })}
+
       <TouchableOpacity activeOpacity={0.8} style={styles.touchableOpacity}>
         <Text
           onPress={myProfile}
