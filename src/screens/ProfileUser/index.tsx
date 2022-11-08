@@ -10,27 +10,14 @@ import { api } from "../../services/api";
 
 import { styles } from "./styles";
 
+type BanksProps = {
+  id: string;
+  bank: string;
+  account: string;
+  agency: string;
+};
+
 export function ProfileUser() {
-  // const [data, setData] = useState<CardProps[]>([]);
-
-  // async function handleFetchData() {
-  //   const response = await AsyncStorage.getItem("@cobranca-facil:userData");
-  //   const data = response ? JSON.parse(response) : {};
-  //   setData(data);
-  // }
-
-
-  // useFocusEffect(useCallback(() => {
-  //   handleFetchData();
-  // }, []));
-
-  type BanksProps = {
-    id: string;
-    bank: string;
-    account: string;
-    agency: string;
-  };
-
   const [banks, setBanks] = useState<BanksProps[]>([]);
 
   async function getBanks() {
@@ -44,15 +31,14 @@ export function ProfileUser() {
     }, [])
   );
 
-  
   const navigation = useNavigation();
   function back() {
-    navigation.navigate('homepage');
-  };
+    navigation.navigate("homepage");
+  }
 
   function myProfile() {
-    navigation.navigate('myprofile');
-  };
+    navigation.navigate("myprofile");
+  }
   return (
     <View style={styles.container}>
       <Profile title="          Meu Perfil" />
@@ -67,21 +53,19 @@ export function ProfileUser() {
       />
 
       <ImageHeadersWhite />
-      {/* <Card data={data}/> */}
 
-      {
-        banks.map((bank, index) => {
-          return (
-            <Card
-              key={index}
-              data={{
-                bank: bank.bank,
-                account: bank.account,
-                agency: bank.agency,
-              }}
-            />
-          );
-        })}
+      {banks.map((bank, index) => {
+        return (
+          <Card
+            key={index}
+            data={{
+              bank: bank.bank,
+              account: bank.account,
+              agency: bank.agency,
+            }}
+          />
+        );
+      })}
 
       <TouchableOpacity activeOpacity={0.8} style={styles.touchableOpacity}>
         <Text
