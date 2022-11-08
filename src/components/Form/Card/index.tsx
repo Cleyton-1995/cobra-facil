@@ -9,6 +9,7 @@ export type CardProps = {
   account: string;
   agency: string;
 }
+
 type Props = {
   data: CardProps;
 }
